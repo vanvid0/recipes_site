@@ -1,0 +1,77 @@
+@use '../mixin/mixin' as *;
+@use '../setting/setting' as *;
+
+.c-smallButton {
+  padding: 5px 20px;
+  margin: 15px auto 15px;
+  font-size: 14px;
+  font-weight: 400;
+  width: 140px;
+  text-align: center;
+  background-color: $mainColor;
+  color: #fff;
+  border-radius: 10px;
+  transition: all 0.25s;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.c-bigButton {
+  cursor: pointer;
+  padding: 10px 20px;
+  margin: 15px auto 15px;
+  font-size: 14px;
+  font-weight: 400;
+  width: 180px;
+  text-align: center;
+  background-color: $mainColor2;
+  border-radius: 5px;
+  transition: all 0.25s;
+  & > a {
+    color: #fff;
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.c-allButton {
+  cursor: pointer;
+  padding: 15px 30px;
+  margin: 60px auto;
+  font-size: 16px;
+  font-weight: 700;
+  width: 280px;
+  text-align: center;
+  background-color: #fff;
+  border: 2px solid $headLineColor;
+  border-radius: 5px;
+  transition: all 0.25s;
+  & > a {
+    color: $headLineColor;
+}
+&:hover {
+  background-color: #eee;
+  opacity: 0.8;
+}
+}
+
+.text {
+  font-size: 14px;
+  color: $mainColor;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.boldText {
+  font-size: 14px;
+  color: $mainColor;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.title {
+  font-size: 16px;
+  color: $mainColor;
+  font-weight: 600;
+  line-height: 1.5;
+}

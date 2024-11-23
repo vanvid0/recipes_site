@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+// placeholder色
+$placeholderColor: #c3c3c3;
+$backGroundColor: #FFF9EE;
+$headLineColor: #840F24;
+$mainColor: #562708;
+$mainColor2: #56242D;
+$appetizer: #D85301;
+$mainDish: #BC2A09;
+$lastDish: #C29906;
+
+// メディアクエリの基準幅
+$bp-sp: 640px;
+$bp-pc: 641px;
+
+// vwの基準となる幅 →320px=スマホ最小
+$vw_standard_width: 375;
+
+// transition
+$transition01: 0.3s ease-in-out;
+
+// color
+//$main_color01: #f7828f;
+

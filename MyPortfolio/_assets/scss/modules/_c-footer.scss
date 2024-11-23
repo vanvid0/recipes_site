@@ -1,0 +1,108 @@
+@use '../mixin/mixin' as *;
+@use '../setting/setting' as *;
+
+
+footer {
+    background-color: $backGroundColor;
+  }
+.c-footer-logo {
+  
+ 
+  &__circkle {
+    width: 48px;
+    height: 48px;
+    background-color: $headLineColor;
+    border-radius: 50%;
+    text-align: center;
+    display: inline-block;
+  }
+
+  &__sake {
+    font-size: 24px;
+    font-weight: 400;
+    color: #fff;
+  }
+
+  &__nomi {
+    font-size: 24px;
+    font-weight: 400;
+    color: $headLineColor;
+  }
+}
+.c-footer-nav {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  // text-align: center;
+}
+.c-footer-nav-ttl {
+  & > a {
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid transparent;
+    transition: all 0.5s;
+  }
+  & > a:hover {
+    border-bottom: 1px solid $mainColor;
+  }
+}
+.c-footer-nav-recipes {
+  & > a {
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid transparent;
+    transition: all 0.5s;
+  }
+  & > a:hover {
+    border-bottom: 1px solid $mainColor;
+  }
+  &__cat > a {
+    display: block;
+    padding: 5px;
+    border-bottom: 1px solid transparent;
+    transition: all 0.5s;
+  }
+  &__cat > a:hover {
+    border-bottom: 1px solid $mainColor;
+  }
+
+}
+.c-footer-nav-tech {
+  & > a {
+    display: block;
+    padding: 5px;
+    border-bottom: 1px solid transparent;
+    transition: all 0.5s;
+  }
+  & > a.title {
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid transparent;
+    transition: all 0.5s;
+  }
+  & > a:hover {
+    border-bottom: 1px solid $mainColor;
+  }
+}
+.footer-nav-health {
+  & > a {
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid transparent;
+    transition: all 0.5s;
+  }
+  & > a:hover {
+    border-bottom: 1px solid $mainColor;
+  }
+}
+
+.c-footer-copy {
+  width: 100%;
+  height: 28px;
+  background-color: $mainColor;
+  text-align: center;
+  &__text{
+    font-size: 14px;
+    font-weight: 250;
+    color: #fff;
+  }
+}
