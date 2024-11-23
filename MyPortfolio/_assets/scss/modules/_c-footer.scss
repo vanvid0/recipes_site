@@ -36,7 +36,7 @@ footer {
 }
 .c-footer-nav-ttl {
   & > a {
-    display: block;
+    display: inline-block;
     padding: 10px;
     border-bottom: 1px solid transparent;
     transition: all 0.5s;
@@ -47,7 +47,7 @@ footer {
 }
 .c-footer-nav-recipes {
   & > a {
-    display: block;
+    display: inline-block;
     padding: 10px;
     border-bottom: 1px solid transparent;
     transition: all 0.5s;
@@ -96,6 +96,7 @@ footer {
 }
 
 .c-footer-copy {
+  margin-top: 60px;
   width: 100%;
   height: 28px;
   background-color: $mainColor;
