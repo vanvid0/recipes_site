@@ -38,7 +38,7 @@ body {
     font-size: 20px;
     color: $headLineColor;
     position: absolute;
-    top: 65%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -89,21 +89,21 @@ body {
     color: $headLineColor;
   }
 
-  &__withBeer {
+  &__with-b {
     margin-top: 60px;
     display: inline-block;
     font-size: 24px;
     position: relative;
   }
 
-  &__withHighball {
+  &__with-h {
     margin-top: 60px;
     display: inline-block;
     font-size: 24px;
     position: relative;
   }
 
-  &__withBeer::after {
+  &__with-b::after {
     content: "";
     width: 100%;
     height: 1px;
@@ -113,7 +113,7 @@ body {
     left: 240px;
   }
 
-  &__withHighball::after {
+  &__with-h::after {
     content: "";
     width: 100%;
     height: 1px;
@@ -144,7 +144,7 @@ body {
 
   &__link {
     display: block;
-    position: relative;
+
     transition: all 0.5s;
   }
 
@@ -153,15 +153,17 @@ body {
     opacity: 0.8;
   }
 
-  &__imgs {
+  &__img {
     position: relative;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    max-height: 240px;
   }
 
-  &__img {
-    display: block;
+  &__img>img {
     width: 100%;
-    height: auto;
-    position: relative;
+    height: 100%;
+    object-fit: cover;
 
   }
 
@@ -170,7 +172,7 @@ body {
     font-size: 12px;
     font-weight: 400;
     position: absolute;
-    top: 131;
+    bottom: 0;
     right: 0;
     color: #fff;
     background-color: $appetizer;
@@ -181,7 +183,7 @@ body {
     font-size: 12px;
     font-weight: 400;
     position: absolute;
-    top: 131;
+    bottom: 0;
     right: 0;
     color: #fff;
     background-color: $mainDish;
@@ -192,7 +194,7 @@ body {
     font-size: 12px;
     font-weight: 400;
     position: absolute;
-    top: 131;
+    bottom: 0;
     right: 0;
     color: #fff;
     background-color: $lastDish;
@@ -270,8 +272,9 @@ body {
 
 .p_home-health {
   position: relative;
+
   &__headline {
-   
+
     margin-top: 120px;
     font-size: 40px;
     text-align: center;
@@ -286,6 +289,7 @@ body {
   }
 
 }
+
 .p_home-health-img {
   position: absolute;
   // width: 100%;
@@ -300,49 +304,26 @@ body {
 }
 
 .c-home-health {
-  
-  margin:60px 0 324px;
+
+  margin: 60px 0 324px;
 
   &__img {
-    position: relative;
-    width: 70%;
-    height: 150px;
+    max-width: 745px;
     margin: 0 auto;
-    border-radius: 10px;
-    box-shadow: #333 2px 2px 4px;
+    border-radius: 50px;
 
-    & > img {
-     
+    &>img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-    
-    }
-  }
+      overflow: hidden;
+      box-shadow: #333 2px 2px 4px;
+      transition: all 0.5s;
 
-
-  &__text1 {
-    position: absolute;
-    top: 10px;
-    left: 32px;
-    font-size: 20px;
-    font-weight: 500;
-    color: $headLineColor;
-  }
-
-  &__text2 {
-    position: absolute;
-    top: 25%;
-    left: 23px;
-    font-size: 48px;
-    color: #fff;
+      &:hover {
+        opacity: 0.8;
+      }
     }
 
-  &__text3 {
-    position: absolute;
-    top: 45%;
-    right: 55px;
-    font-size: 24px;
-    color: #fff;
   }
 }

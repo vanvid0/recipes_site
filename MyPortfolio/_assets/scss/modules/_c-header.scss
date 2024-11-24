@@ -7,8 +7,8 @@ c-header
 
 
 .c-header-flex {
-  padding: 30px;
-  z-index: 10;
+  padding: 10px 30px;
+  z-index: 100;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -16,28 +16,12 @@ c-header
   }
 
 .c-header-logo {
-  
- 
-  &__circkle {
-    width: 64px;
-    height: 64px;
-    background-color: $headLineColor;
-    border-radius: 50%;
-    text-align: center;
-    display: inline-block;
-  }
-
-  &__sake {
-    font-size: 36px;
-    font-weight: 400;
-    color: #fff;
-  }
-
-  &__nomi {
-    font-size: 36px;
-    font-weight: 400;
-    color: $headLineColor;
-  }
+  width: 222px;
+  height: 55px;
+  // & img {
+  //   width: 100%;
+  //   height: 100%;
+  // }
 }
 
 .c-header-nav {
@@ -51,17 +35,27 @@ c-header
       padding: 10px;
       margin-right: 30px;
       font-weight: 400;
-      color: $headLineColor;
+      color: #fff;
       border-bottom: 2px solid transparent;
       transition: all 0.5s;
     }
 
     &__link:hover {
-      border-bottom: 2px solid $headLineColor;
+      opacity: 0.8;
+      border-bottom: 2px solid $mainColor;
     }
 
-    &__link::after {
-      content: ' ＞';
+    &__item > .text {
+      color: #fff;
+    }
+    &__item > .ico {
+      width: 30px;
+      height: 30px;
+      display: inline-block;
+    }
+    &__item > .ico img {
+      width: 100%;
+      height: 100%;
     }
   }
 }
