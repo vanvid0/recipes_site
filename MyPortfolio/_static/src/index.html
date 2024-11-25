@@ -51,12 +51,12 @@
           <img src="/img/common/illust/cheers.png" alt="cheers">
         </div>
       </div>
-      
+
 
       <!-- レシピ一覧 -->
-    
-        <section class="p_home-recipes">
-          <div class="inner-block">
+
+      <section class="p_home-recipes">
+        <div class="inner-block">
           <h1 class="p_home-recipes__headline Kranky">Recipes</h1>
           <div class="p_home-recipes__rubi">レシピ</div>
           <h2 class=" p_home-recipes__with-b">ビールに合うレシピ</h2>
@@ -112,9 +112,9 @@
           </ul>
           <div class="p_home-recipes__button c-button-b"><a href="#">View More</a></div>
         </div>
-        </section>
-        <section class="p_home-recipes">
-          <div class="inner-block">
+      </section>
+      <section class="p_home-recipes">
+        <div class="inner-block">
           <h2 class=" p_home-recipes__with-h">ハイボールに合うレシピ</h2>
           <ul class="p_home-recipes-grid">
             <li class="p_home-recipes-grid__item">
@@ -168,9 +168,9 @@
           </ul>
           <div class="p_home-recipes__button c-button-b"><a href="#">View More</a></div>
         </div>
-        </section>
-        <section class="p_home-recipes">
-          <div class="inner-block">
+      </section>
+      <section class="p_home-recipes">
+        <div class="inner-block">
           <h2 class=" p_home-recipes__with-b">ワインに合うレシピ</h2>
           <ul class="p_home-recipes-grid">
             <li class="p_home-recipes-grid__item">
@@ -224,9 +224,9 @@
           </ul>
           <div class="p_home-recipes__button c-button-b"><a href="#">View More</a></div>
         </div>
-        </section>
-        <div class="p_home-recipes__button c-button-a"><a href="#">全てのレシピを見る</a></div>
-      
+      </section>
+      <div class="p_home-recipes__button c-button-a"><a href="#">全てのレシピを見る</a></div>
+
 
 
       <!-- 料理のコツ -->
@@ -243,16 +243,17 @@
             <div class="p_home-tips-img">
               <img src="/img/common/illust/vine.png" alt="cheers">
             </div>
-
-            <div class="c-home-tab-nav" id="js-tab">
-              <a href="" class="c-home-tab-nav__item is_active" data-nav="0">包丁の持ち方</a>
-              <a href="" class="c-home-tab-nav__item" data-nav="1">皮活用</a>
-              <a href="" class="c-home-tab-nav__item" data-nav="2">下処理・下準備</a>
-            </div>
-            <div class="c-home-tab-contents">
-              <div class="c-home-tab-contents-item" data-content="0">包丁のコンテンツ</div>
-              <div class="c-home-tab-contents-item" data-content="1">皮のコンテンツ</div>
-              <div class="c-home-tab-contents-item" data-content="2">下処理のコンテンツ</div>
+            <div class="c-home-tab" id="js-tab">
+              <div class="c-home-tab-nav">
+                <a href="" class="c-home-tab-nav__item is_active" data-nav="0">包丁の持ち方</a>
+                <a href="" class="c-home-tab-nav__item" data-nav="1">皮活用</a>
+                <a href="" class="c-home-tab-nav__item" data-nav="2">下処理・下準備</a>
+              </div>
+              <div class="c-home-tab-contents">
+                <div class="c-home-tab-contents__item" data-content="0">包丁のコンテンツ</div>
+                <div class="c-home-tab-contents__item" data-content="1">皮のコンテンツ</div>
+                <div class="c-home-tab-contents__item" data-content="2">下処理のコンテンツ</div>
+              </div>
             </div>
 
             <div class="c-button-b"><a href="">Viw More</a></div>
@@ -287,6 +288,7 @@
 
   </div><!-- /wrapper -->
 
+  <script src="/js/tab.js"></script>
   <script src="/js/lib/jquery-3.7.1.min.js"></script>
   <script src="/js/common.js"></script>
 </body>

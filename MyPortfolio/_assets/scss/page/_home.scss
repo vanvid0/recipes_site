@@ -285,9 +285,18 @@ width: 100%;
     border-bottom: 2px solid transparent;
     transition: all 0.5s;
   }
+  &__item.is-active {
+    border-bottom: 2px solid $mainColor;
+  }
 
   &__item:hover {
     border-bottom: 2px solid $mainColor;
+  }
+}
+.c-home-tab-contents {
+
+  &__item {
+    display: none;
   }
 }
 
