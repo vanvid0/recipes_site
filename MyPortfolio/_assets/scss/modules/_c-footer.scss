@@ -2,16 +2,21 @@
 @use '../setting/setting' as *;
 
 
-footer {
-    background-color: $backGroundColor;
+footer { 
+      background-color: $backGroundColor;
+      }
+.c-footer-logo {
+  width: 222px;
+  & > img {
+    width: 100%;
+
   }
-// .c-footer-logo {}
+}
 .c-footer-nav {
   padding: 0 100px;
-
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  // text-align: center;
+    // text-align: center;
 }
 .c-footer-nav-ttl {
   & > a {
