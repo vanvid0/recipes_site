@@ -5,38 +5,18 @@
 footer {
     background-color: $backGroundColor;
   }
-.c-footer-logo {
-  
- 
-  &__circkle {
-    width: 48px;
-    height: 48px;
-    background-color: $headLineColor;
-    border-radius: 50%;
-    text-align: center;
-    display: inline-block;
-  }
-
-  &__sake {
-    font-size: 24px;
-    font-weight: 400;
-    color: #fff;
-  }
-
-  &__nomi {
-    font-size: 24px;
-    font-weight: 400;
-    color: $headLineColor;
-  }
-}
+// .c-footer-logo {}
 .c-footer-nav {
+  padding: 0 100px;
+
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   // text-align: center;
 }
 .c-footer-nav-ttl {
   & > a {
-    display: inline-block;
+    text-align: center;
+    display: block;
     padding: 10px;
     border-bottom: 1px solid transparent;
     transition: all 0.5s;
@@ -47,7 +27,8 @@ footer {
 }
 .c-footer-nav-recipes {
   & > a {
-    display: inline-block;
+    text-align: center;
+    display: block;
     padding: 10px;
     border-bottom: 1px solid transparent;
     transition: all 0.5s;
@@ -68,6 +49,7 @@ footer {
 }
 .c-footer-nav-tech {
   & > a {
+    text-align: center;
     display: block;
     padding: 5px;
     border-bottom: 1px solid transparent;
@@ -85,6 +67,7 @@ footer {
 }
 .footer-nav-health {
   & > a {
+    text-align: center;
     display: block;
     padding: 10px;
     border-bottom: 1px solid transparent;

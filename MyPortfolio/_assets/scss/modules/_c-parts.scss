@@ -1,9 +1,9 @@
 @use '../mixin/mixin' as *;
 @use '../setting/setting' as *;
 
-.c-smallButton {
+.c-button-s {
   padding: 5px 20px;
-  margin: 15px auto 15px;
+  margin: 24px auto;
   font-size: 14px;
   font-weight: 400;
   width: 140px;
@@ -17,10 +17,10 @@
   }
 }
 
-.c-bigButton {
+.c-button-b {
   cursor: pointer;
   padding: 10px 20px;
-  margin: 15px auto 15px;
+  margin: 0 auto;
   font-size: 14px;
   font-weight: 400;
   width: 180px;
@@ -36,10 +36,10 @@
   }
 }
 
-.c-allButton {
+.c-button-a {
   cursor: pointer;
   padding: 15px 30px;
-  margin: 60px auto;
+  margin: 0 auto;
   font-size: 16px;
   font-weight: 700;
   width: 280px;

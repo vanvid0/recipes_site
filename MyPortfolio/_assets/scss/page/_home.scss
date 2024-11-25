@@ -5,7 +5,7 @@
 @use '../mixin/mixin' as *;
 @use '../setting/setting' as *;
 
-body {
+main {
   background-color: $backGroundColor;
 }
 
@@ -25,48 +25,53 @@ body {
   }
 
   &__ttl {
-    font-size: 48px;
-    color: $headLineColor;
+    width: 377px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
+& > img {
+width: 100%;
+}
   }
 
   &__subttl {
-    font-size: 20px;
-    color: $headLineColor;
+    width: 240px;
     position: absolute;
     top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
+    & >img {
+      width: 100%;
+    }
   }
 }
 
 .p_home-about {
-  margin-top: 40px;
+  margin-top: 81.9px;
   text-align: center;
+  position: relative;
 
   &__text {
     font-weight: 400;
     font-size: 24px;
     color: $mainColor;
     line-height: 3.5;
+    letter-spacing: 0.14em;
   }
 }
 
 .p_home-about-img {
   // width: 100%;
-  position: relative;
+  position: absolute;
+    top: 217px;
+    right: -92px;
 
   img {
     width: 200px;
     height: 200px;
     transform: rotate(30deg);
-    position: absolute;
-    top: -64px;
-    right: 128px;
+    
   }
 }
 
@@ -77,10 +82,11 @@ body {
   max-width: 1200px;
 
   &__headline {
-    margin-top: 120px;
+    margin-top: 162px;
     font-size: 64px;
     text-align: center;
     color: $headLineColor;
+    
   }
 
   &__rubi {
@@ -89,43 +95,59 @@ body {
     color: $headLineColor;
   }
 
+  & h2 {
+    display: flex;
+    align-items: center;
+
+    &::after {
+      content: "";
+      height: 1px;
+      flex-grow: 1;
+      margin-left: 4rem;
+      background-color: $mainColor;
+    }
+  }
+
   &__with-b {
     margin-top: 60px;
-    display: inline-block;
     font-size: 24px;
-    position: relative;
+    color: $mainColor;
   }
 
   &__with-h {
     margin-top: 60px;
-    display: inline-block;
     font-size: 24px;
-    position: relative;
+    color: $mainColor;
   }
 
-  &__with-b::after {
-    content: "";
-    width: 100%;
-    height: 1px;
-    background-color: $mainColor;
-    position: absolute;
-    top: 50%;
-    left: 240px;
-  }
+  // &__with-b::after {
+  //   content: "";
+  //   width: 100%;
+  //   height: 1px;
+  //   background-color: $mainColor;
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 240px;
+  // }
 
-  &__with-h::after {
-    content: "";
-    width: 100%;
-    height: 1px;
-    background-color: $mainColor;
-    position: absolute;
-    top: 50%;
-    left: 300px;
-  }
+  // &__with-h::after {
+  //   content: "";
+  //   width: 100%;
+  //   height: 1px;
+  //   background-color: $mainColor;
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 300px;
+  // }
 
   &__button {
-    margin-top: 36px;
+    margin-top: 48px;
   }
+  &__button.c-button-a {
+    margin-top: 64px;
+
+  }
+
 }
 
 .p_home-recipes-grid {
@@ -202,6 +224,7 @@ body {
 
   &__info {
     padding: 10px;
+    background-color: #fff;
   }
 
   &__headline {
@@ -214,8 +237,9 @@ body {
     padding: 10px;
     font-size: 14px;
     color: $mainColor2;
+    letter-spacing: 0.14em;
   }
-
+  
 
 }
 
@@ -229,6 +253,7 @@ body {
   font-size: 20px;
   color: $mainColor;
   line-height: 2.5;
+  letter-spacing: 0.14em;
 }
 
 .p_home-tips-img {
@@ -286,6 +311,7 @@ body {
     font-size: 20px;
     color: $mainColor;
     line-height: 2.5;
+    letter-spacing: 0.14em;
   }
 
 }
