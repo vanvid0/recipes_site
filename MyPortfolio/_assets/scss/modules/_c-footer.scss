@@ -7,6 +7,10 @@ footer {
       }
 .c-footer-logo {
   width: 222px;
+  @include sp {
+    width: 124px;
+   margin: 194px auto 0;
+  }
   & > img {
     width: 100%;
 
@@ -17,6 +21,9 @@ footer {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
     // text-align: center;
+    @include sp {
+      display: none;
+    }
 }
 .c-footer-nav-ttl {
   & > a {

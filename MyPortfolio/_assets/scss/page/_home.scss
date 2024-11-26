@@ -54,19 +54,28 @@ main {
   text-align: center;
   position: relative;
 
+  @include sp {
+    margin-top: 79px;
+  }
+
   &__text {
     font-weight: 400;
     font-size: 24px;
     color: $mainColor;
     line-height: 3.5;
     letter-spacing: 0.14em;
+
+    @include sp {
+      font-size: 16px;
+    }
+
   }
 }
 
 .p_home-about-img {
   // width: 100%;
   position: absolute;
-  top: 217px;
+  top: 277px;
   right: 64px;
 
   img {
@@ -74,6 +83,10 @@ main {
     height: 200px;
     transform: rotate(30deg);
 
+    @include sp {
+      width: 93px;
+      height: 90px;
+    }
   }
 }
 
@@ -84,18 +97,31 @@ main {
   max-width: 1200px;
   margin: 0 auto;
 
+  @include sp {
+    max-width: 640px;
+
+  }
+
   &__headline {
     margin-top: 162px;
     font-size: 64px;
     text-align: center;
     color: $headLineColor;
 
+    @include sp {
+      margin-top: 80px;
+      font-size: 36px;
+    }
   }
 
   &__rubi {
     font-size: 15px;
     text-align: center;
     color: $headLineColor;
+
+    @include sp {
+      font-size: 12px;
+    }
   }
 
   & h2 {
@@ -115,12 +141,22 @@ main {
     margin-top: 60px;
     font-size: 24px;
     color: $mainColor;
+
+    @include sp {
+      margin-top: 47px;
+      font-size: 15px;
+    }
   }
 
   &__with-h {
     margin-top: 60px;
     font-size: 24px;
     color: $mainColor;
+
+    @include sp {
+      margin-top: 47px;
+      font-size: 15px;
+    }
   }
 
   // &__with-b::after {
@@ -160,6 +196,9 @@ main {
   gap: 20px;
   margin: 20px 48px;
 
+  @include sp {
+    display: block;
+  }
 
 }
 
@@ -182,6 +221,7 @@ main {
   &__img {
     position: relative;
     aspect-ratio: 16/9;
+    width: 100%;
     overflow: hidden;
     max-height: 240px;
   }
@@ -251,6 +291,29 @@ main {
 /*
 料理のコツ
 */
+.p_home-tech {
+  margin-top: 81.9px;
+  text-align: center;
+  position: relative;
+
+  @include sp {
+    margin-top: 18px;
+  }
+  
+    &__headline {
+      margin-top: 162px;
+      font-size: 64px;
+      text-align: center;
+      color: $headLineColor;
+  
+      @include sp {
+        margin-top: 161px;
+        font-size: 36px;
+      }
+    }
+   }
+
+
 
 .p_home-tips__text {
   font-weight: 400;
@@ -258,6 +321,10 @@ main {
   color: $mainColor;
   line-height: 2.5;
   letter-spacing: 0.14em;
+
+  @include sp {
+    font-size: 16px;
+  }
 }
 
 .p_home-tips-img {
@@ -265,6 +332,11 @@ main {
   width: 100%;
   top: 0;
   left: -320px;
+
+  @include sp {
+    top: -229px;
+    left: -213px;
+  }
 
   &>img {
     width: 100px;
@@ -300,14 +372,10 @@ main {
 }
 
 .c-home-tab-contents {
- 
-  &__item {
-    
-    display: none;
-   
-  }
 
-  
+  &__item {
+    display: none;
+  }
 }
 
 .home-tab-contents__content {
@@ -321,12 +389,14 @@ main {
   border-radius: 10px;
   box-shadow: 2px 2px 6px #ccc;
   position: relative;
-  &  .label-cat  {
+
+  & .label-cat {
     position: absolute;
     top: 0;
     right: 0;
 
   }
+
   & span {
     position: absolute;
     top: 0;
@@ -334,9 +404,11 @@ main {
   }
 
 }
+
 .p-home-tech__button {
   margin-top: 70px;
 }
+
 /*
 休肝日
 */
@@ -350,6 +422,20 @@ main {
     font-size: 40px;
     text-align: center;
     color: $headLineColor;
+
+    @include sp {
+      font-size: 36px;
+    }
+  }
+
+  &__description {
+    margin-top: 81.9px;
+    text-align: center;
+    position: relative;
+
+    @include sp {
+      margin-top: 16px;
+    }
   }
 
   &__text {
@@ -366,17 +452,19 @@ main {
   position: absolute;
   // width: 100%;
   top: 0;
-  right: 10px;
+  right: 46px;
 
   &>img {
     width: 150px;
     height: auto;
     transform: rotate(15deg);
+    @include sp {
+      width: 81px;
+    }
   }
 }
 
 .c-home-health {
-
   margin-top: 64px;
 
   &__img {
