@@ -30,9 +30,10 @@ main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-& > img {
-width: 100%;
-}
+
+    &>img {
+      width: 100%;
+    }
   }
 
   &__subttl {
@@ -41,7 +42,8 @@ width: 100%;
     top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
-    & >img {
+
+    &>img {
       width: 100%;
     }
   }
@@ -64,14 +66,14 @@ width: 100%;
 .p_home-about-img {
   // width: 100%;
   position: absolute;
-    top: 217px;
-    right: -92px;
+  top: 217px;
+  right: 64px;
 
   img {
     width: 200px;
     height: 200px;
     transform: rotate(30deg);
-    
+
   }
 }
 
@@ -80,14 +82,14 @@ width: 100%;
 */
 .p_home-recipes {
   max-width: 1200px;
-  margin: 0 auto; 
+  margin: 0 auto;
 
   &__headline {
     margin-top: 162px;
     font-size: 64px;
     text-align: center;
     color: $headLineColor;
-    
+
   }
 
   &__rubi {
@@ -144,6 +146,7 @@ width: 100%;
   &__button {
     margin-top: 48px;
   }
+
   &__button.c-button-a {
     margin-top: 64px;
 
@@ -240,7 +243,7 @@ width: 100%;
     color: $mainColor2;
     letter-spacing: 0.14em;
   }
-  
+
 
 }
 
@@ -286,6 +289,7 @@ width: 100%;
     border-bottom: 2px solid transparent;
     transition: all 0.5s;
   }
+
   &__item.is-active {
     border-bottom: 2px solid $mainColor;
   }
@@ -294,13 +298,45 @@ width: 100%;
     border-bottom: 2px solid $mainColor;
   }
 }
-.c-home-tab-contents {
 
+.c-home-tab-contents {
+ 
   &__item {
+    
     display: none;
+   
   }
+
+  
 }
 
+.home-tab-contents__content {
+  margin: 44px auto 0;
+  max-width: 744px;
+  height: 66px;
+  background-color: #fff;
+  text-align: left;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 6px #ccc;
+  position: relative;
+  &  .label-cat  {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+  }
+  & span {
+    position: absolute;
+    top: 0;
+    right: 36px;
+  }
+
+}
+.p-home-tech__button {
+  margin-top: 70px;
+}
 /*
 休肝日
 */
@@ -347,7 +383,7 @@ width: 100%;
     width: 75%;
     height: auto;
     margin: 0 auto;
- 
+
 
     &>img {
       border-radius: 10px;
