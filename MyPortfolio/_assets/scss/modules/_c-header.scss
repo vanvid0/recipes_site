@@ -104,6 +104,43 @@ c-header
   }
 }
 
+.c-hamburger.open {
+  padding: 10px;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.25s;
+
+
+  & span:nth-child(1) {
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    top: 14px;
+    background-color: $headLineColor;
+    transform: rotate(135deg);
+  }
+
+  & span:nth-child(2) {
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    top: 14px;
+    background-color: $headLineColor;
+    display: none;
+  }
+
+  & span:nth-child(3) {
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    bottom: 14px;
+    background-color: $headLineColor;
+    transform: rotate(-135deg);
+  }
+}
+
 .c-header-menu {
   padding: 0 20px;
   margin: 0 auto;
@@ -119,6 +156,7 @@ c-header
 }
 .c-header-menu.open {
   display: block;
+  
 }
 .c-header-menu-recipes {
   position: relative;

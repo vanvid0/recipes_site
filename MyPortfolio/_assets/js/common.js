@@ -206,23 +206,23 @@
   //ハンバーガーメニュー
   (() => {
     const $doc = document;
-    const $nav = $doc.getElementById('js-menu');
+    const $menu = $doc.getElementById('js-menu');
 
     //クリックされたらおこるイベント
-const handleClick = (e) => {
+    const handleClick = (e) => {
 
 
-    //openクラスをつける
-    if ($nav.classList.contains('open')) {
-      $nav.classList.remove('open');
-    } else
-      $nav.classList.add('open');
-    } 
-      $nav.addEventListener('click', handleClick);
-      console.log('hello');
+      //openクラスをつける
+      if ($menu.classList.contains('open')) {
+        $menu.classList.remove('open');
+      } else
+        $menu.classList.add('open');
+    }
+    $menu.addEventListener('click', handleClick);
+    console.log('hello');
     //mask設定
- 
+
   })();
- 
+
 
 })(jQuery);
