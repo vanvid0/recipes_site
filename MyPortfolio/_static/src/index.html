@@ -18,7 +18,7 @@
   <title>酒飲みのためのレシピサイト</title>
   <meta name="keywords" content="">
   <meta name="description" content="">
-
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
   <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 
@@ -32,7 +32,8 @@
 
       <div class="p_home-mv">
         <div class="p_home-mv__img">
-          <img src="/img/common/mv/mv.png" alt="mainvisual">
+          <img src="/img/common/mv/mv.png" class="pc" alt="mainvisual">
+          <img src="/img/common/mv/mv-sp.png" class="sp" alt="mainvisual">
         </div>
         <div class="p_home-mv__ttl">
           <img src="/img/common/logo/main-logo.png" alt="">
@@ -115,7 +116,8 @@
 
 
           <h2 class=" p_home-recipes__with-h">ハイボールに合うレシピ</h2>
-          <ul class="p_home-recipes-grid">
+          <ul class="p_home-recipes-grid pc">
+          <ul class="p_home-recipes-grid l-slider01-block__slider sp">
             <li class="p_home-recipes-grid__item">
               <article class="p_home-recipes-card">
                 <a href="#" class="p_home-recipes-card__link">
@@ -165,6 +167,7 @@
               </article>
             </li>
           </ul>
+        </ul>
           <div class="p_home-recipes__button c-button-b"><a href="#">View More</a></div>
 
 
@@ -339,9 +342,10 @@
     <!--#include virtual="/inc/footer.html" -->
 
   </div><!-- /wrapper -->
-
+ 
   <script src="/js/tab.js"></script>
   <script src="/js/lib/jquery-3.7.1.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
   <script src="/js/common.js"></script>
 </body>
 

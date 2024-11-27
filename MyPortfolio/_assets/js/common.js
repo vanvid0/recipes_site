@@ -1,22 +1,22 @@
 (function ($) {
   'use strict';
 
-// PC/SP判定
-// スクロールイベント
-// リサイズイベント
-// スムーズスクロール
+  // PC/SP判定
+  // スクロールイベント
+  // リサイズイベント
+  // スムーズスクロール
 
   /* ここから */
   var break_point = 640;//ブレイクポイント
-  var mql = window.matchMedia('screen and (max-width: '+break_point+'px)');//、MediaQueryListの生成
+  var mql = window.matchMedia('screen and (max-width: ' + break_point + 'px)');//、MediaQueryListの生成
   var deviceFlag = mql.matches ? 1 : 0; // 0 : PC ,  1 : SP
 
-// pagetop
+  // pagetop
   var timer = null;
   var $pageTop = $('#pagetop');
   $pageTop.hide();
 
-// スクロールイベント
+  // スクロールイベント
   $(window).on('scroll touchmove', function () {
 
     // スクロール中か判定
@@ -56,7 +56,7 @@
   });
 
 
-// リサイズイベント
+  // リサイズイベント
 
   var checkBreakPoint = function (mql) {
     deviceFlag = mql.matches ? 1 : 0;// 0 : PC ,  1 : SP
@@ -68,35 +68,35 @@
     deviceFlag = mql.matches;
   }
 
-// ブレイクポイントの瞬間に発火
+  // ブレイクポイントの瞬間に発火
   mql.addListener(checkBreakPoint);//MediaQueryListのchangeイベントに登録
 
-// 初回チェック
+  // 初回チェック
   checkBreakPoint(mql);
 
 
 
   var Header = {
-    init:function(){
+    init: function () {
       this.$btn = $('.nav-btn');
       this.$nav = $('.nav-wrap');
       this.event();
     },
-    event:function(){
+    event: function () {
       var _this = this;
-      this.$btn.on('click',function(){
-        if($(this).hasClass('active')){
+      this.$btn.on('click', function () {
+        if ($(this).hasClass('active')) {
           _this.close();
-        }else{
+        } else {
           _this.open();
         }
       });
     },
-    open:function(){
+    open: function () {
       this.$btn.addClass('active');
       this.$nav.addClass('active');
     },
-    close:function(){
+    close: function () {
       this.$btn.removeClass('active');
       this.$nav.removeClass('active');
     }
@@ -104,8 +104,8 @@
   Header.init();
 
 
-// スムーズスクロール
-// #で始まるアンカーをクリックした場合にスムーススクロール
+  // スムーズスクロール
+  // #で始まるアンカーをクリックした場合にスムーススクロール
   $('a[href^="#"]').on('click', function () {
     var speed = 500;
     // アンカーの値取得
@@ -181,26 +181,48 @@
   });
 
 
-  // var slider01 = $('.l-slider01-block__slider');
-  // if(slider01[0]){
-  //   slider01.slick({
-  //     autoplay:true,
-  //     slidesToShow:3,
-  //     slidesToScroll:1,
-  //     centerMode: true,
-  //     speed:2000,
-  //     nextArrow:'<button class="slick-next slick-arrow" aria-label="Next" type="button" style=""></button>',
-  //     prevArrow:'<button class="slick-prev slick-arrow" aria-label="Prev" type="button" style=""></button>',
-  //     responsive: [
-  //       {
-  //         breakpoint: 641,
-  //         settings: {
-  //           slidesToShow:1,
-  //           speed:800,
-  //         }
-  //       }
-  //     ]
-  //   });
-  // }
+  var slider01 = $('.l-slider01-block__slider');
+  if (slider01[0]) {
+    slider01.slick({
+      autoplay: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      centerMode: true,
+      speed: 2000,
+      // nextArrow:'<button class="slick-next slick-arrow" aria-label="Next" type="button" style=""></button>',
+      // prevArrow:'<button class="slick-prev slick-arrow" aria-label="Prev" type="button" style=""></button>',
+      // responsive: [
+      //   {
+      //     breakpoint: 641,
+      //     settings: {
+      //       slidesToShow:1,
+      //       speed:800,
+      //     }
+      //   }
+      // ]
+    });
+  }
+
+  //ハンバーガーメニュー
+  (() => {
+    const $doc = document;
+    const $nav = $doc.getElementById('js-menu');
+
+    //クリックされたらおこるイベント
+const handleClick = (e) => {
+
+
+    //openクラスをつける
+    if ($nav.classList.contains('open')) {
+      $nav.classList.remove('open');
+    } else
+      $nav.classList.add('open');
+    } 
+      $nav.addEventListener('click', handleClick);
+      console.log('hello');
+    //mask設定
+ 
+  })();
+ 
 
 })(jQuery);
