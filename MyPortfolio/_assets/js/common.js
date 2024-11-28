@@ -187,10 +187,11 @@
       autoplay: true,
       slidesToShow: 1,
       slidesToScroll: 1,
-      centerMode: true,
+      dots: true,
+      centerMode: false,
       speed: 2000,
-      // nextArrow:'<button class="slick-next slick-arrow" aria-label="Next" type="button" style=""></button>',
-      // prevArrow:'<button class="slick-prev slick-arrow" aria-label="Prev" type="button" style=""></button>',
+      nextArrow:'<button class="slick-next slick-arrow" aria-label="Next" type="button" style=""></button>',
+      prevArrow:'<button class="slick-prev slick-arrow" aria-label="Prev" type="button" style=""></button>',
       // responsive: [
       //   {
       //     breakpoint: 641,
@@ -203,24 +204,15 @@
     });
   }
 
-  //ハンバーガーメニュー
+  //スクロールしたらヘッダーに背景付ける
   (() => {
     const $doc = document;
-    const $menu = $doc.getElementById('js-menu');
+    const $nav = $doc.querySelector('c-header-flex')
+    
+    //スクロールをとる
 
-    //クリックされたらおこるイベント
-    const handleClick = (e) => {
-
-
-      //openクラスをつける
-      if ($menu.classList.contains('open')) {
-        $menu.classList.remove('open');
-      } else
-        $menu.classList.add('open');
-    }
-    $menu.addEventListener('click', handleClick);
-    console.log('hello');
-    //mask設定
+    //クラスactiveをつける
+    $nav.classList.add('active');
 
   })();
 
