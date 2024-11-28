@@ -204,17 +204,16 @@
     });
   }
 
-  //スクロールしたらヘッダーに背景付ける
-  (() => {
-    const $doc = document;
-    const $nav = $doc.querySelector('c-header-flex')
-    
-    //スクロールをとる
-
-    //クラスactiveをつける
-    $nav.classList.add('active');
-
-  })();
-
+  //スクロールしたらヘッダーにactiveクラスをつける
+  $(window).on('scroll', function() {
+    if ($(this).scrollTop() > 20) {
+      $('.c-header-flex').addClass('active');
+      $('.c-header-nav-list__item').addClass('active');
+    } else {
+      $('.c-header-flex').removeClass('active');
+      $('.c-header-nav-list__item').removeClass('active');
+    }
+  }
+  );
 
 })(jQuery);

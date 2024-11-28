@@ -13,11 +13,10 @@ c-header
   display: flex;
   justify-content: space-between;
   position: fixed;
+  // background-color: $backGroundColor;
+  color: #fff;
 }
-.c-header-flex.active{
-  background-color: $backGroundColor;
-  color: $mainColor;
-}
+
 
 .c-header-logo {
   width: 222px;
@@ -33,7 +32,7 @@ c-header
   @include sp {
     display: none;
   }
-
+}
   .c-header-nav-list {
     display: flex;
     align-items: center;
@@ -43,7 +42,7 @@ c-header
       padding: 10px;
       margin-right: 30px;
       font-weight: 400;
-      color: #fff;
+      // color: #fff;
       border-bottom: 2px solid transparent;
       transition: all 0.5s;
     }
@@ -68,9 +67,17 @@ c-header
       height: 100%;
     }
   }
+
+.c-header-flex.active{
+  background-color: $backGroundColor;
+ 
 }
 
-
+.c-header-nav-list__item.active {
+  & > .text {
+    color: $mainColor;
+  }
+}
 
 /*
 ハンバーガーメニュー
