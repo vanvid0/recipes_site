@@ -85,3 +85,65 @@
     display: block;
   }
 }
+
+.c-recipes-cat {
+  max-width: 248px;
+  text-align: center;
+
+  & span {
+    display: block;
+    padding: 10px;
+
+    &::after {
+      content: "";
+      width: 8px;
+      height: 1px;
+      background-color: $mainColor;
+    }
+  }
+
+  & a {
+    padding: 10px;
+    display: block;
+    border-bottom: 1px dashed $mainColor;
+  }
+
+  &__b {
+    margin-top: 60px;
+  }
+}
+
+.p_recipes-flex {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  overflow: visible;
+  height: auto;
+  @include sp {
+    display: block;
+    
+  }
+}
+
+.c-recipes-cat {  
+  position: sticky;
+  top: 0px;
+  @include sp {
+    display: none;
+  }
+  }
+  .p_recipes-menu {
+    text-align: center;
+    & span {
+      display: block;
+    }
+    & select {
+      margin: 0;
+      padding: 0;
+      // background: none;
+      // border: none;
+      border-radius: 0;
+      // outline: none;
+      // appearance: none;
+      
+    }
+  }

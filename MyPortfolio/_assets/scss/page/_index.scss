@@ -2,4 +2,6 @@
 * Page エントリーポイント
 -------------------------------------------------- */
 @use './home';
-@use './resipes'
+@use './recipes';
+@use './category';
+@use './detail'

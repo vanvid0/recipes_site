@@ -1,0 +1,161 @@
+/* -----------------------------------------------
+* home Module
+* homeページ用
+-------------------------------------------------- */
+@use '../mixin/mixin' as *;
+@use '../setting/setting' as *;
+
+.p_recipes-mv {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  &__img {
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__ttl {
+    width: 377px;
+    height: 69px;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+
+  }
+}
+
+.p_recipes-map {
+  display: flex;
+
+  & .ico {
+    padding: 10px;
+  }
+
+  &>a {
+    display: block;
+    padding: 10px;
+  }
+}
+
+.p_recipes {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @include sp {
+    max-width: 640px;
+
+  }
+
+  &__headline {
+    margin-top: 102px;
+    font-size: 64px;
+    text-align: center;
+    color: $headLineColor;
+
+    @include sp {
+      margin-top: 80px;
+      font-size: 36px;
+    }
+  }
+
+  &__rubi {
+    font-size: 15px;
+    text-align: center;
+    color: $headLineColor;
+
+    @include sp {
+      font-size: 12px;
+    }
+  }
+}
+
+.p_recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin: 20px 48px;
+
+  @include sp {
+    display: block;
+  }
+}
+
+.c-recipes-cat {
+  max-width: 248px;
+  text-align: center;
+
+  & span {
+    display: block;
+    padding: 10px;
+
+    &::after {
+      content: "";
+      width: 8px;
+      height: 1px;
+      background-color: $mainColor;
+    }
+  }
+
+  & a {
+    padding: 10px;
+    display: block;
+    border-bottom: 1px dashed $mainColor;
+  }
+
+  &__b {
+    margin-top: 60px;
+  }
+}
+
+.p_recipes-flex {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  overflow: visible;
+  height: auto;
+  @include sp {
+    display: block;
+    
+  }
+}
+
+.c-recipes-cat {  
+  position: sticky;
+  top: 0px;
+  @include sp {
+    display: none;
+  }
+  }
+  .p_recipes-menu {
+    text-align: center;
+    & span {
+      display: block;
+    }
+    & select {
+      margin: 0;
+      padding: 0;
+      // background: none;
+      // border: none;
+      border-radius: 0;
+      // outline: none;
+      // appearance: none;
+      
+    }
+  }
+  h2 {
+    display: flex;
+    align-items: center;
+
+    &::after {
+      content: "";
+      height: 1px;
+      flex-grow: 1;
+      margin-left: 4rem;
+      background-color: $mainColor;
+    }
+  }

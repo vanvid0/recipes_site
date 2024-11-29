@@ -1,0 +1,111 @@
+@charset "UTF-8";
+/* -----------------------------------------------
+* home Module
+* homeページ用
+-------------------------------------------------- */
+.p_recipes-mv {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.p_recipes-mv__img {
+  height: 100%;
+}
+.p_recipes-mv__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.p_recipes-mv__ttl {
+  width: 377px;
+  height: 69px;
+  position: absolute;
+  top: 30%;
+  left: 10%;
+}
+
+h2 {
+  display: flex;
+  align-items: center;
+}
+h2::after {
+  content: "";
+  height: 1px;
+  flex-grow: 1;
+  margin-left: 4rem;
+  background-color: #562708;
+}
+
+.p_recipes-map {
+  display: flex;
+}
+.p_recipes-map .ico {
+  padding: 10px;
+}
+.p_recipes-map > a {
+  display: block;
+  padding: 10px;
+}
+
+.c-recipes-cat {
+  max-width: 248px;
+  text-align: center;
+}
+.c-recipes-cat span {
+  display: block;
+  padding: 10px;
+}
+.c-recipes-cat span::after {
+  content: "";
+  width: 8px;
+  height: 1px;
+  background-color: #562708;
+}
+.c-recipes-cat a {
+  padding: 10px;
+  display: block;
+  border-bottom: 1px dashed #562708;
+}
+.c-recipes-cat__b {
+  margin-top: 60px;
+}
+
+.p_detail-grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 20px;
+  margin: 20px 48px;
+}
+@media only screen and (max-width: 640px) {
+  .p_detail-grid {
+    display: block;
+  }
+}
+
+.p_recipes-flex {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  overflow: visible;
+  height: auto;
+}
+@media only screen and (max-width: 640px) {
+  .p_recipes-flex {
+    display: block;
+  }
+}
+
+.p_detail-ingredients {
+  background-color: #fff;
+  border-radius: 10px;
+}
+.p_detail-ingredients__table__th {
+  text-align: left;
+}
+.p_detail-how__to {
+  list-style-type: decimal;
+}
+.p_detail-how__do {
+  padding: 10px;
+}
+/*# sourceMappingURL=detail.css.map */
