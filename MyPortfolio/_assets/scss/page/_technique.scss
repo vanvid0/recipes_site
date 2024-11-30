@@ -1,0 +1,23 @@
+/* -----------------------------------------------
+* home Module
+* homeページ用
+-------------------------------------------------- */
+@use '../mixin/mixin' as *;
+@use '../setting/setting' as *;
+
+.p_tech-cat-grid1 {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 70px;
+  overflow: visible;
+  height: auto;
+
+  & a {
+    display: block;
+  }
+  @include sp {
+    display: block;
+    
+  }
+}

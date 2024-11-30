@@ -30,18 +30,31 @@
   }
 }
 
+.p_detail {
+  position: relative;
 
-h2 {
-  display: flex;
-  align-items: center;
+  &__headline {
+    display: flex;
+    align-items: center;
+    margin-top: 60px;
+    font-size: 24px;
+    color: $mainColor;
 
-  &::after {
-    content: "";
-    height: 1px;
-    flex-grow: 1;
-    margin-left: 4rem;
-    background-color: $mainColor;
+
+    &::after {
+      content: "";
+      height: 1px;
+      flex-grow: 1;
+      margin-left: 4rem;
+      background-color: $mainColor;
+    }
+
   }
+  & > span {
+    bottom: 24px;    
+    right: 0;
+  }
+
 }
 
 .p_recipes-map {
@@ -83,7 +96,20 @@ h2 {
     margin-top: 60px;
   }
 }
-.p_detail-grid {
+
+.p_recipes-grid1 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  overflow: visible;
+  height: auto;
+
+  @include sp {
+    display: block;
+
+  }
+}
+
+.p_detail-grid2 {
   display: grid;
   grid-template-columns: 3fr 2fr;
   gap: 20px;
@@ -93,36 +119,27 @@ h2 {
     display: block;
   }
 }
-.p_recipes-flex {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  overflow: visible;
-  height: auto;
-  @include sp {
-    display: block;
-    
-  }
-}
 
 .p_detail-ingredients {
   background-color: #fff;
   border-radius: 10px;
+
   &__table {
-    
+
     &__th {
       text-align: left;
     }
-    &__td {
-      
-    }
+
+    &__td {}
   }
 }
 
 .p_detail-how {
- 
+
   &__to {
     list-style-type: decimal;
   }
+
   &__do {
     padding: 10px;
   }

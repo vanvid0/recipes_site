@@ -1,0 +1,44 @@
+/* -----------------------------------------------
+* home Module
+* homeページ用
+-------------------------------------------------- */
+@use '../mixin/mixin' as *;
+@use '../setting/setting' as *;
+
+.p_tech-grid1 {
+  margin-top: 170px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 70px;
+  overflow: visible;
+  height: auto;
+
+  & a {
+    display: block;
+  }
+  @include sp {
+    display: block;
+    
+  }
+}
+
+.p_tech__content {
+  margin: 14px auto 0;
+  max-width: 744px;
+  height: 66px;
+  background-color: #fff;
+  text-align: left;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 6px #ccc;
+  position: relative;
+  & .label-cat {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+  }
+
+  
+  }

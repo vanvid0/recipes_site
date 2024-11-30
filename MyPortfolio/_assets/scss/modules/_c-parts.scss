@@ -61,18 +61,21 @@
   font-size: 12px;
   color: #fff;
   font-weight: bold;
+  letter-spacing: 0.14;
   letter-spacing: 0.32em;
 }
 .text {
   font-size: 14px;
   color: $mainColor;
   font-weight: 400;
+  letter-spacing: 0.14;
   line-height: 1.5;
 }
 .text-b {
   font-size: 14px;
   color: $mainColor;
   font-weight: 600;
+  letter-spacing: 0.14;
   line-height: 1.5;
 }
 .title {
@@ -81,3 +84,70 @@
   font-weight: 600;
   line-height: 1.5;
 }
+.hint {
+  font-size: 24px;
+  color: $headLineColor;
+  font-weight: 700;
+  letter-spacing: 0.14;
+  line-height: 1.5;
+}
+
+.c-label-a {
+  padding: 5px 20px;
+  font-size: 12px;
+  font-weight: 400;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: #fff;
+  background-color: $appetizer;
+}
+
+.c-label-m {
+  padding: 5px 20px;
+  font-size: 12px;
+  font-weight: 400;
+  position: absolute;
+  
+  color: #fff;
+  background-color: $mainDish;
+}
+
+.c-label-l {
+  padding: 5px 20px;
+  font-size: 12px;
+  font-weight: 400;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: #fff;
+  background-color: $lastDish;
+}
+
+.c-recipes-cat {
+  max-width: 248px;
+  text-align: center;
+
+  & span {
+    display: block;
+    padding: 10px;
+
+    &::after {
+      content: "";
+      width: 8px;
+      height: 1px;
+      background-color: $mainColor;
+    }
+  }
+
+  & a {
+    padding: 10px;
+    display: block;
+    border-bottom: 1px dashed $mainColor;
+  }
+
+  &__b {
+    margin-top: 60px;
+  }
+}
+
