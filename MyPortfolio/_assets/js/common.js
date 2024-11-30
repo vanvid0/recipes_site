@@ -187,11 +187,11 @@
       autoplay: true,
       slidesToShow: 1,
       slidesToScroll: 1,
-      dots: true,
+      dots: false,
       centerMode: false,
       speed: 2000,
-      nextArrow:'<button class="slick-next slick-arrow" aria-label="Next" type="button" style=""></button>',
-      prevArrow:'<button class="slick-prev slick-arrow" aria-label="Prev" type="button" style=""></button>',
+      // nextArrow:'<button class="slick-next slick-arrow" aria-label="Next" type="button" style=""></button>',
+      // prevArrow:'<button class="slick-prev slick-arrow" aria-label="Prev" type="button" style=""></button>',
       // responsive: [
       //   {
       //     breakpoint: 641,

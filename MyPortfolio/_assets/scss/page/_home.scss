@@ -201,6 +201,11 @@ main {
   }
 
 }
+.l-slider01-block__slider {
+  @include sp {
+    display: block;
+  }
+}
 
 .p_home-recipes-card {
   border: 1px solid $mainColor;

@@ -46,6 +46,7 @@
 .p_recipes {
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
 
   @include sp {
     max-width: 640px;
@@ -75,7 +76,21 @@
   }
 }
 
-.p_recipes-grid {
+.p_recipes-grid1 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  overflow: visible;
+  height: 100vh;
+  position: relative;
+
+  @include sp {
+    display: block;
+
+
+  }
+}
+
+.p_recipes-grid2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
@@ -83,12 +98,15 @@
 
   @include sp {
     display: block;
+
   }
 }
 
 .c-recipes-cat {
   max-width: 248px;
   text-align: center;
+  position: sticky;
+  top: 0;
 
   & span {
     display: block;
@@ -111,51 +129,41 @@
   &__b {
     margin-top: 60px;
   }
-}
 
-.p_recipes-flex {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  overflow: visible;
-  height: auto;
-  @include sp {
-    display: block;
-    
-  }
-}
-
-.c-recipes-cat {  
-  position: sticky;
-  top: 0px;
   @include sp {
     display: none;
   }
-  }
-  .p_recipes-menu {
-    text-align: center;
-    & span {
-      display: block;
-    }
-    & select {
-      margin: 0;
-      padding: 0;
-      // background: none;
-      // border: none;
-      border-radius: 0;
-      // outline: none;
-      // appearance: none;
-      
-    }
-  }
-  h2 {
-    display: flex;
-    align-items: center;
+}
 
-    &::after {
-      content: "";
-      height: 1px;
-      flex-grow: 1;
-      margin-left: 4rem;
-      background-color: $mainColor;
-    }
+
+.p_recipes-menu {
+  text-align: center;
+
+  & span {
+    display: block;
   }
+
+  & select {
+    margin: 0;
+    padding: 0;
+    // background: none;
+    // border: none;
+    border-radius: 0;
+    // outline: none;
+    // appearance: none;
+
+  }
+}
+
+h2 {
+  display: flex;
+  align-items: center;
+
+  &::after {
+    content: "";
+    height: 1px;
+    flex-grow: 1;
+    margin-left: 4rem;
+    background-color: $mainColor;
+  }
+}
