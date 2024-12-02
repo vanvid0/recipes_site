@@ -5,54 +5,26 @@
 @use '../mixin/mixin' as *;
 @use '../setting/setting' as *;
 
-.p_recipes-mv {
-  width: 100%;
-  height: 100%;
-  position: relative;
 
-  &__img {
-    height: 100%;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-
-  &__ttl {
-    width: 377px;
-    height: 69px;
-    position: absolute;
-    top: 30%;
-    left: 10%;
-
-  }
-}
 
 .p_detail {
   position: relative;
+  width: 62%;
 
   &__headline {
-    display: flex;
     align-items: center;
     margin-top: 60px;
     font-size: 24px;
     color: $mainColor;
+    border-bottom: 1px solid $mainColor;
 
 
-    &::after {
-      content: "";
-      height: 1px;
-      flex-grow: 1;
-      margin-left: 4rem;
-      background-color: $mainColor;
-    }
 
   }
-  & > span {
-    bottom: 24px;    
-    right: 0;
+
+  &>span {
+    bottom: 15px;
+    right: 16px;
   }
 
 }
@@ -70,32 +42,32 @@
   }
 }
 
-.c-recipes-cat {
-  max-width: 248px;
-  text-align: center;
+// .c-recipes-cat {
+//   max-width: 248px;
+//   text-align: center;
 
-  & span {
-    display: block;
-    padding: 10px;
+//   & span {
+//     display: block;
+//     padding: 10px;
 
-    &::after {
-      content: "";
-      width: 8px;
-      height: 1px;
-      background-color: $mainColor;
-    }
-  }
+//     &::after {
+//       content: "";
+//       width: 8px;
+//       height: 1px;
+//       background-color: $mainColor;
+//     }
+//   }
 
-  & a {
-    padding: 10px;
-    display: block;
-    border-bottom: 1px dashed $mainColor;
-  }
+//   & a {
+//     padding: 10px;
+//     display: block;
+//     border-bottom: 1px dashed $mainColor;
+//   }
 
-  &__b {
-    margin-top: 60px;
-  }
-}
+//   &__b {
+//     margin-top: 60px;
+//   }
+// }
 
 .p_recipes-grid1 {
   display: grid;
@@ -124,10 +96,21 @@
   background-color: #fff;
   border-radius: 10px;
 
+  &>span {
+    display: block;
+    padding: 10px;
+  }
+
   &__table {
+
+    &__tr {
+     
+    }
+
 
     &__th {
       text-align: left;
+      padding: 5px
     }
 
     &__td {}
@@ -135,6 +118,7 @@
 }
 
 .p_detail-how {
+  min-height: 330px;
 
   &__to {
     list-style-type: decimal;

@@ -102,38 +102,38 @@
   }
 }
 
-.c-recipes-cat {
-  max-width: 248px;
-  text-align: center;
-  position: sticky;
-  top: 0;
+// .c-recipes-cat {
+//   max-width: 248px;
+//   text-align: center;
+//   position: sticky;
+//   top: 0;
 
-  & span {
-    display: block;
-    padding: 10px;
+//   & span {
+//     display: block;
+//     padding: 10px;
 
-    &::after {
-      content: "";
-      width: 8px;
-      height: 1px;
-      background-color: $mainColor;
-    }
-  }
+//     &::after {
+//       content: "";
+//       width: 8px;
+//       height: 1px;
+//       background-color: $mainColor;
+//     }
+//   }
 
-  & a {
-    padding: 10px;
-    display: block;
-    border-bottom: 1px dashed $mainColor;
-  }
+//   & a {
+//     padding: 10px;
+//     display: block;
+//     border-bottom: 1px dashed $mainColor;
+//   }
 
-  &__b {
-    margin-top: 60px;
-  }
+//   &__b {
+//     margin-top: 60px;
+//   }
 
-  @include sp {
-    display: none;
-  }
-}
+//   @include sp {
+//     display: none;
+//   }
+// }
 
 
 .p_recipes-menu {
@@ -155,15 +155,3 @@
   }
 }
 
-h2 {
-  display: flex;
-  align-items: center;
-
-  &::after {
-    content: "";
-    height: 1px;
-    flex-grow: 1;
-    margin-left: 4rem;
-    background-color: $mainColor;
-  }
-}

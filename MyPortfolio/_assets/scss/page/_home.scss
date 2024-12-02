@@ -124,7 +124,7 @@ main {
     }
   }
 
-  & h2 {
+  &__with-b, &__with-h {
     display: flex;
     align-items: center;
 
@@ -194,7 +194,7 @@ main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  margin: 20px 48px;
+  margin: 20px 38px;
 
   @include sp {
     display: block;
@@ -205,6 +205,9 @@ main {
   @include sp {
     display: block;
   }
+}
+button.slick-arrow.slick-next {
+  display: none;
 }
 
 .p_home-recipes-card {
@@ -420,6 +423,7 @@ main {
 
 .p_home-health {
   position: relative;
+  
 
   &__headline {
 
@@ -469,12 +473,12 @@ main {
   }
 }
 
-.c-home-health {
+.p_home-health-banner {
   margin-top: 64px;
 
   &__img {
-    width: 347px;
-    height: 89px;
+    width: 70%;
+    height: auto;
     margin: 0 auto;
 
 

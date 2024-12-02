@@ -78,6 +78,13 @@
   letter-spacing: 0.14;
   line-height: 1.5;
 }
+.text-r {
+  font-size: 16px;
+  color: $mainColor;
+  font-weight: 500;
+  letter-spacing: 0.14;
+  line-height: 1.5;
+}
 .title {
   font-size: 16px;
   color: $mainColor;
@@ -150,32 +157,27 @@
     margin-top: 60px;
   }
 }
+.c-cap {
+  max-width: 324px;
+  text-align: center;
 
-// .c-recipes-cat {
-//   max-width: 248px;
-//   text-align: center;
-//   position: sticky;
-//   top: 0;
+  & span {
+    display: block;
+    padding: 10px;
 
-//   & span {
-//     display: block;
-//     padding: 10px;
+   
+  }
 
-//     &::after {
-//       content: "";
-//       width: 8px;
-//       height: 1px;
-//       background-color: $mainColor;
-//     }
-//   }
+}
 
-//   & a {
-//     padding: 10px;
-//     display: block;
-//     border-bottom: 1px dashed $mainColor;
-//   }
-
-//   &__b {
-//     margin-top: 60px;
-//   }
-// }
+.c-recipes-cat {  
+  margin-left: 30px;
+  height: 0;
+  position: sticky;
+  top: 64px;
+  background: #fff;
+  @include sp {
+    display: none;
+  }
+  }
+ 

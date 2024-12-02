@@ -44,7 +44,7 @@
 }
 
 .p_recipes {
-  max-width: 1200px;
+  
   margin: 0 auto;
 
   @include sp {
@@ -78,7 +78,8 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   overflow: visible;
-  height: auto;
+  
+  position: relative;
   @include sp {
     display: block;
     
@@ -95,39 +96,3 @@
   }
 }
 
-
-
-.p_recipes-grid1 {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  overflow: visible;
-  height: auto;
-  @include sp {
-    display: block;
-    
-  }
-}
-
-.c-recipes-cat {  
-  position: sticky;
-  top: 0px;
-  @include sp {
-    display: none;
-  }
-  }
-  .p_recipes-menu {
-    text-align: center;
-    & span {
-      display: block;
-    }
-    & select {
-      margin: 0;
-      padding: 0;
-      // background: none;
-      // border: none;
-      border-radius: 0;
-      // outline: none;
-      // appearance: none;
-      
-    }
-  }
