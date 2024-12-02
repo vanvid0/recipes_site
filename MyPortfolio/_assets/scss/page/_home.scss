@@ -291,7 +291,10 @@ button.slick-arrow.slick-next {
     color: $mainColor2;
     letter-spacing: 0.14em;
   }
-
+@include sp {
+display: block;
+margin-top: 20px;
+}
 
 }
 
