@@ -168,6 +168,15 @@
   }
 }
 
+.c-recipes-cat {
+  margin-left: 30px;
+  height: 0;
+  position: sticky;
+  top: 64px;
+   @include sp {
+    display: none;
+  }
+}
 .c-cap {
   max-width: 324px;
   text-align: center;
@@ -179,7 +188,7 @@
     display: block;
     padding: 10px;
 
-
+  
   }
 
   @include sp {
@@ -187,17 +196,6 @@
   }
 }
 
-.c-recipes-cat {
-  margin-left: 30px;
-  height: 0;
-  position: sticky;
-  top: 64px;
-  background: #fff;
-
-  @include sp {
-    display: none;
-  }
-}
 
 .c-header-ico {
   display: inline-block;

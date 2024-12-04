@@ -207,15 +207,14 @@
   //スクロールしたらヘッダーにactiveクラスをつける
   $(window).on('scroll', function() {
     if ($(this).scrollTop() > 20) {
+      var $icon = $('.js-arrow');
       $('.c-header-flex').addClass('active');
       $('.c-header-nav-list__item').addClass('active');
-      $('.c-header-ico').addClass('active');
-      $('.c-scroll-ico').addClass('active');
+         $icon.find('path').attr('fill', '#562708');
     } else {
       $('.c-header-flex').removeClass('active');
       $('.c-header-nav-list__item').removeClass('active');
-      $('.c-header-ico').removeClass('active');
-      $('.c-scroll-ico').removeClass('active');
+      $icon.find('path').attr('fill', '#fff');
     }
   }
   );
