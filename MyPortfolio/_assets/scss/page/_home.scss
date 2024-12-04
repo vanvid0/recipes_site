@@ -295,6 +295,13 @@ button.slick-arrow.slick-next {
 display: block;
 margin-top: 20px;
 }
+ &__button {
+  position: relative;
+  &+.ico {
+    position: absolute;
+    
+  }
+ }
 
 }
 
