@@ -10,8 +10,13 @@
   text-align: center;
   background-color: $mainColor;
   color: #fff;
-  border-radius: 10px;
+  border-radius: 6px;
   transition: all 0.25s;
+  position: relative;
+  & > .ico {
+    position: absolute;
+    right: 8px;
+  }
 
   &:hover {
     opacity: 0.8;
@@ -27,8 +32,13 @@
   width: 180px;
   text-align: center;
   background-color: $mainColor2;
-  border-radius: 5px;
+  border-radius: 6px;
   transition: all 0.25s;
+  position: relative;
+  & > .ico {
+    position: absolute;
+    right: 14px;
+  }
 
   &>a {
     color: #fff;
@@ -51,6 +61,11 @@
   border: 2px solid $headLineColor;
   border-radius: 5px;
   transition: all 0.25s;
+  position: relative;
+  & > .ico {
+    position: absolute;
+    right: 12px;
+  }
 
   &>a {
     color: $headLineColor;
@@ -145,15 +160,27 @@
   max-width: 248px;
   text-align: center;
 
-  & span {
-    display: block;
+  & span.title {
+    display: inline-block;
     padding: 10px;
+    position: relative;
 
+    &::before,
     &::after {
+      position: absolute;
+      display: block;
       content: "";
       width: 8px;
-      height: 1px;
+      height: 2px;
       background-color: $mainColor;
+      top: 50%;
+    
+    }
+    &::before {
+      left: -8px;
+    }
+    &::after {
+      right: -8px;
     }
   }
 

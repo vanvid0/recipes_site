@@ -190,8 +190,8 @@
       dots: true,
       centerMode: false,
       speed: 2000,
-      nextArrow:'<button class="slick-next slick-arrow" aria-label="Next" type="button" style=""></button>',
-      prevArrow:'<button class="slick-prev slick-arrow" aria-label="Prev" type="button" style=""></button>',
+      nextArrow: '<button class="slick-next slick-arrow" aria-label="Next" type="button" style=""></button>',
+      prevArrow: '<button class="slick-prev slick-arrow" aria-label="Prev" type="button" style=""></button>',
       // responsive: [
       //   {
       //     breakpoint: 641,
@@ -205,37 +205,40 @@
   }
 
   //スクロールしたらヘッダーにactiveクラスをつける
-  $(window).on('scroll', function() {
+  $(document).ready(function () {
+  $(window).on('scroll', function () {
     if ($(this).scrollTop() > 20) {
       var $icon = $('.js-arrow');
       $('.c-header-flex').addClass('active');
       $('.c-header-nav-list__item').addClass('active');
-         $icon.find('path').attr('fill', '#562708');
+      $icon.find('path').attr('fill', '#562708');
     } else {
       $('.c-header-flex').removeClass('active');
       $('.c-header-nav-list__item').removeClass('active');
       $icon.find('path').attr('fill', '#fff');
+      console.log($('.js-arrow'));
     }
   }
   );
+});
 
 })(jQuery);
 
 (() => {
   const express = require('express');
-const app = express();
+  const app = express();
 
-app.use(express.static('public', {
+  app.use(express.static('public', {
     setHeaders: (res, path) => {
-        if (path.endsWith('.svg')) {
-            res.set('Content-Type', 'image/svg+xml');
-        }
+      if (path.endsWith('.svg')) {
+        res.set('Content-Type', 'image/svg+xml');
+      }
     }
-}));
+  }));
 
-app.listen(3000, () => {
+  app.listen(3000, () => {
     console.log('Server running on port 3000');
-});
+  });
 
 
 })();
