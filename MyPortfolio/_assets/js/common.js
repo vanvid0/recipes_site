@@ -204,41 +204,31 @@
     });
   }
 
-  //スクロールしたらヘッダーにactiveクラスをつける
   $(document).ready(function () {
-  $(window).on('scroll', function () {
-    if ($(this).scrollTop() > 20) {
-      var $icon = $('.js-arrow');
-      $('.c-header-flex').addClass('active');
-      $('.c-header-nav-list__item').addClass('active');
-      $icon.find('path').attr('fill', '#562708');
-    } else {
-      $('.c-header-flex').removeClass('active');
-      $('.c-header-nav-list__item').removeClass('active');
-      $icon.find('path').attr('fill', '#fff');
-      console.log($('.js-arrow'));
-    }
-  }
-  );
-});
+    // スクロールイベント
+    $(window).on('scroll', function () {
+      var $icon = $('.js-arrow'); // 一度だけ取得して使い回す
+    
+      // スクロール位置の判定
+      if ($(window).scrollTop() > 20) {
+        $('.c-header-flex').addClass('active');
+        $('.c-header-nav-list__item').addClass('active');
+  
+        var $path = $icon.find('path');
+        if ($path.length) {
+          $path.attr('fill', '#562708'); 
+        }
+      } else {
+        $('.c-header-flex').removeClass('active');
+        $('.c-header-nav-list__item').removeClass('active');
+  
+        var $path = $icon.find('path');
+        if ($path.length) {
+          $path.attr('fill', '#fff'); 
+        }
+      }
+    });
+  });
 
 })(jQuery);
 
-(() => {
-  const express = require('express');
-  const app = express();
-
-  app.use(express.static('public', {
-    setHeaders: (res, path) => {
-      if (path.endsWith('.svg')) {
-        res.set('Content-Type', 'image/svg+xml');
-      }
-    }
-  }));
-
-  app.listen(3000, () => {
-    console.log('Server running on port 3000');
-  });
-
-
-})();
