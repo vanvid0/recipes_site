@@ -36,10 +36,12 @@
   const $doc = document;
   const $btn = $doc.getElementById('js-menu');
   const $menu = $doc.querySelector('.c-header-menu'); // 最初の1つだけ取得
+  const $back = $doc.querySelector('.c-header-flex'); // 最初の1つだけ取得
   
   const handleClick = () => {
     $btn.classList.toggle('open');
     $menu.classList.toggle('open');
+    $back.classList.toggle('open');
     };
 
   $btn.addEventListener('click', handleClick);

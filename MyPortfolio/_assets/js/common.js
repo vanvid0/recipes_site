@@ -189,6 +189,7 @@
       slidesToScroll: 1,
       dots: true,
       centerMode: false,
+      infinite: true,
       speed: 2000,
       nextArrow: '<button class="slick-next slick-arrow" aria-label="Next" type="button" style=""></button>',
       prevArrow: '<button class="slick-prev slick-arrow" aria-label="Prev" type="button" style=""></button>',

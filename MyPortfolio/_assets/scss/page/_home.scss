@@ -203,7 +203,7 @@ main {
 }
 .l-slider01-block__slider {
   @include sp {
-    display: block;
+   display: block;
   }
 }
 button.slick-arrow.slick-next {
@@ -304,6 +304,17 @@ margin-top: 20px;
  }
 
 }
+// .slick-dots {
+//   display: flex;
+//   & li {
+//     list-style: none;
+//     & button {
+//       margin-right: 10px;
+      
+//     }
+//   }
+// }
+  
 
 
 /*
