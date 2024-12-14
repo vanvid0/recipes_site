@@ -21,6 +21,7 @@ main {
       width: 100%;
       height: 100%;
       object-fit: cover;
+
     }
   }
 
@@ -31,9 +32,20 @@ main {
     left: 50%;
     transform: translate(-50%, -50%);
 
+
     &>img {
       width: 100%;
     }
+  }
+
+  &__blur {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    box-shadow: 30px 30px 186px 150px #fff;
+    border-radius: 10px;
   }
 
   &__subttl {
@@ -42,6 +54,7 @@ main {
     top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
+
 
     &>img {
       width: 100%;
@@ -124,7 +137,8 @@ main {
     }
   }
 
-  &__with-b, &__with-h {
+  &__with-b,
+  &__with-h {
     display: flex;
     align-items: center;
 
@@ -201,11 +215,13 @@ main {
   }
 
 }
+
 .l-slider01-block__slider {
   @include sp {
-   display: block;
+    display: block;
   }
 }
+
 button.slick-arrow.slick-next {
   display: none;
 }
@@ -291,30 +307,34 @@ button.slick-arrow.slick-next {
     color: $mainColor2;
     letter-spacing: 0.14em;
   }
-@include sp {
-display: block;
-margin-top: 20px;
-}
- &__button {
-  position: relative;
-  &+.ico {
-    position: absolute;
-    
+
+  @include sp {
+    display: block;
+    margin-top: 20px;
   }
- }
+
+  &__button {
+    position: relative;
+
+    &+.ico {
+      position: absolute;
+
+    }
+  }
 
 }
+
 // .slick-dots {
 //   display: flex;
 //   & li {
 //     list-style: none;
 //     & button {
 //       margin-right: 10px;
-      
+
 //     }
 //   }
 // }
-  
+
 
 
 /*
@@ -328,19 +348,19 @@ margin-top: 20px;
   @include sp {
     margin-top: 18px;
   }
-  
-    &__headline {
-      margin-top: 162px;
-      font-size: 64px;
-      text-align: center;
-      color: $headLineColor;
-  
-      @include sp {
-        margin-top: 161px;
-        font-size: 36px;
-      }
+
+  &__headline {
+    margin-top: 162px;
+    font-size: 64px;
+    text-align: center;
+    color: $headLineColor;
+
+    @include sp {
+      margin-top: 161px;
+      font-size: 36px;
     }
-   }
+  }
+}
 
 
 
@@ -444,7 +464,7 @@ margin-top: 20px;
 
 .p_home-health {
   position: relative;
-  
+
 
   &__headline {
 
@@ -488,6 +508,7 @@ margin-top: 20px;
     width: 150px;
     height: auto;
     transform: rotate(15deg);
+
     @include sp {
       width: 81px;
     }
