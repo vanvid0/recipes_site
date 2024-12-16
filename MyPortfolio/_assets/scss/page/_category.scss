@@ -76,25 +76,25 @@
   }
 }
 
-.p_recipes-grid1 {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  overflow: visible;
-  height: 100vh;
-  position: relative;
+// .p_recipes-grid1 {
+//   display: grid;
+//   grid-template-columns: 2fr 1fr;
+//   overflow: visible;
+//   height: 100vh;
+//   position: relative;
 
-  @include sp {
-    display: block;
+//   @include sp {
+//     display: block;
 
 
-  }
-}
+//   }
+// }
 
 .p_recipes-grid2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  margin: 20px 48px;
+  margin-top: 20px;
 
   @include sp {
     display: block;

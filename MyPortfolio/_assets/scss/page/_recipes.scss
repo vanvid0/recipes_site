@@ -91,7 +91,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  margin: 20px 48px;
+  margin-top: 20px;
 
   @include sp {
     display: block;

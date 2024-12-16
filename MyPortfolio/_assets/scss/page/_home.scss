@@ -210,8 +210,9 @@ main {
   gap: 20px;
   margin: 20px 38px;
 
-  @include sp {
-    display: block;
+  @include max(970) {
+    grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
   }
 
 }
@@ -219,6 +220,7 @@ main {
 .l-slider01-block__slider {
   @include sp {
     display: block;
+    margin: 0 10px;
   }
 }
 
@@ -230,6 +232,9 @@ button.slick-arrow.slick-next {
   border: 1px solid $mainColor;
   border-radius: 10px;
   overflow: hidden;
+  @include sp {
+    margin: 0 10px;
+  }
 
   &__link {
     display: block;

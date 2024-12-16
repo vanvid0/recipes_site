@@ -69,17 +69,17 @@
 //   }
 // }
 
-.p_recipes-grid1 {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  overflow: visible;
-  height: auto;
+// .p_recipes-grid1 {
+//   display: grid;
+//   grid-template-columns: 2fr 1fr;
+//   overflow: visible;
+//   height: auto;
 
-  @include sp {
-    display: block;
+//   @include sp {
+//     display: block;
 
-  }
-}
+//   }
+// }
 
 .p_detail-grid2 {
   display: grid;
