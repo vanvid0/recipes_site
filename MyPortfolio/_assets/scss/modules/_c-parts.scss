@@ -240,3 +240,26 @@
     display: inline-block;
   }
 }
+
+// あさみ↓
+// .dot-img {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   gap: 15px;
+//   li {
+//     width: 14px;
+//     height: 14px;
+//     background-color: transparent;
+//     border: 2px solid $green;
+//     border-radius: 50%;
+//     transition: 0.3s;
+//     @include sp() {
+//       width: 10px;
+//       height: 10px;
+//     }
+//     &.slick-active {
+//       background-color: $green;
+//     }
+//   }
+// }

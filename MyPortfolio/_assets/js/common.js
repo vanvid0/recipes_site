@@ -203,6 +203,21 @@
       //   }
       // ]
     });
+    // あさみ↓
+    // slider01.slick({
+    //   autoplay: true,
+    //   slidesToShow: 1,
+    //   slidesToScroll: 1,
+    //   dots: true,
+    //   dotsClass: "dot-img",
+    //   appendDots: $(".c-slider-arrows"),
+    //   centerMode: false,
+    //   infinite: true,
+    //   speed: 2000,
+    //   nextArrow: '<button class="slick-next slick-arrow" aria-label="Next" type="button" style=""></button>',
+    //   prevArrow: '<button class="slick-prev slick-arrow" aria-label="Prev" type="button" style=""></button>',
+
+    // });
   }
 
   $(document).ready(function () {
