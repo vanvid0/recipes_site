@@ -1,33 +1,67 @@
+<?php
+global $template_url;
+global $home_url;
+?>
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width">
+  <link rel="shortcut icon" href="<?php echo $template_url; ?>/favicon.ico">
+  <link rel="apple-touch-icon" href="<?php echo $template_url; ?>/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Murecho:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kranky&family=Murecho:wght@100..900&display=swap"
+    rel="stylesheet">
+
+  <title>酒飲みのためのレシピサイト</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <link rel="stylesheet" type="text/css" href="<?php echo $template_url; ?>/css/style.css">
+  <?php wp_head(); ?>
+</head>
+
+
+<body>
+
+  <div id="wrapper">
 <header>
   <div id="header" class="outer-block">
 
     <div class="c-header-menu">
       <span class="c-header-menu-recipes text-b">レシピを探す</span>
-      <a href="/recipes/" class="c-header-menu-recipes__all title">レシピ一覧</a>
+      <a href="<?php echo $home_url; ?>/recipes/" class="c-header-menu-recipes__all title">レシピ一覧</a>
       <div class="c-header-menu-recipes__cat">
-        <a href="/category/" class="text-b">お酒の種類から探す</a>
-        <a href="/category/" class="text">ビールに合うレシピ</a>
-        <a href="/category/" class="text">ハイボールに合うレシピ</a>
-        <a href="/category/" class="text">ワインに合うレシピ</a>
+        <a href="<?php echo $home_url; ?>/category/" class="text-b">お酒の種類から探す</a>
+        <a href="<?php echo $home_url; ?>/category/" class="text">ビールに合うレシピ</a>
+        <a href="<?php echo $home_url; ?>/category/" class="text">ハイボールに合うレシピ</a>
+        <a href="<?php echo $home_url; ?>/category/" class="text">ワインに合うレシピ</a>
       </div>
       <div class="c-header-menu-recipes__cat">
-        <a href="/recipes/" class="text-b">料理の種類から探す</a>
-        <a href="/recipes/" class="text">簡単おつまみ</a>
-        <a href="/recipes/" class="text">主菜のおつまみ</a>
-        <a href="/recipes/" class="text">〆の逸品</a>
+        <a href="<?php echo $home_url; ?>/recipes/" class="text-b">料理の種類から探す</a>
+        <a href="<?php echo $home_url; ?>/recipes/" class="text">簡単おつまみ</a>
+        <a href="<?php echo $home_url; ?>/recipes/" class="text">主菜のおつまみ</a>
+        <a href="<?php echo $home_url; ?>/recipes/" class="text">〆の逸品</a>
       </div>
 
       <div class="c-header-menu-tech">
         <span class=" text-b">料理のコツ</span>
-        <a href="/technique/" class="title">料理のコツ一覧</a>
-        <a href="/technique/cat/detail/" class="text">包丁の持ち方</a>
-        <a href="/technique/cat/detail/" class="text">下処理・下準備</a>
-        <a href="/technique/cat/detail/" class="text">皮活用</a>
+        <a href="<?php echo $home_url; ?>/technique/" class="title">料理のコツ一覧</a>
+        <a href="<?php echo $home_url; ?>/technique/cat/detail/" class="text">包丁の持ち方</a>
+        <a href="<?php echo $home_url; ?>/technique/cat/detail/" class="text">下処理・下準備</a>
+        <a href="<?php echo $home_url; ?>/technique/cat/detail/" class="text">皮活用</a>
       </div>
       <!-- <div class="c-header-health">
-        <a href="#">
+        <a href="<?php echo $home_url; ?>#">
           <div class="c-header-health__img">
-            <img src="/img/common/logo/health-logo.png" alt="">
+            <img href="<?php echo $template_url; ?>/img/common/logo/health-logo.png" alt="">
           </div>
         </a>
       </div> -->
@@ -36,8 +70,8 @@
 
     <div class="c-header-flex">
       <div class="c-header-logo">
-        <a href="/">
-          <img src="/img/common/logo/title-logo.png" alt="logo">
+        <a href="<?php echo $home_url; ?>/">
+          <img src="<?php echo $template_url; ?>/img/common/logo/title-logo.png" alt="logo">
         </a>
       </div>
       <div class="c-hamburger sp" id="js-menu">
@@ -50,7 +84,7 @@
       <div class="c-header-nav">
         <ul class="c-header-nav-list">
           <li>
-            <a href="/recipes/" class="c-header-nav-list__link">
+            <a href="<?php echo $home_url; ?>/recipes/" class="c-header-nav-list__link">
               <div class="c-header-nav-list__item">
                 <span class="text">
                   レシピを探す
@@ -69,7 +103,7 @@
             </a>
           </li>
           <li>
-            <a href="/technique/" class="c-header-nav-list__link">
+            <a href="<?php echo $home_url; ?>/technique/" class="c-header-nav-list__link">
               <div class="c-header-nav-list__item">
                 <span class="text">
                   料理のコツ
@@ -86,7 +120,7 @@
             </a>
           </li>
           <!-- <li>
-            <a href="#" class="c-header-nav-list__link">
+            <a href="<?php echo $home_url; ?>#" class="c-header-nav-list__link">
               <div class="c-header-nav-list__item">
                 <span class="text">
                   休肝日を作ろう

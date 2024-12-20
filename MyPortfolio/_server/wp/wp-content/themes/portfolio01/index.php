@@ -1,19 +1,22 @@
-
+<?php
+global $template_url;
+global $home_url;
+?>
 <?php get_header(); ?>
 
 <main class="outer-block p_home">
 
 <div class="p_home-mv">
   <div class="p_home-mv__img">
-    <img src="/img/common/mv/mv.png" class="pc" alt="mainvisual">
-    <img src="/img/common/mv/mv-sp.png" class="sp" alt="mainvisual">
+    <img src="https://dummyimage.com/2732x1211/000/fff" class="pc" alt="mainvisual">
+    <img src="https://dummyimage.com/375x474/000/fff" class="sp" alt="mainvisual">
   </div>
   <div class="p_home-mv__blur"></div>
   <div class="p_home-mv__ttl">
-    <img src="/img/common/logo/main-logo.png" alt="">
+    <img src="<?php echo $template_url; ?>/img/common/logo/main-logo.png" alt="">
   </div>
   <div class="p_home-mv__subttl ">
-    <img src="/img/common/logo/sub-logo.png" alt="">
+    <img src="<?php echo $template_url; ?>/img/common/logo/sub-logo.png" alt="">
   </div>
 </div>
 <div class="p_home-about">
@@ -23,7 +26,7 @@
     酒飲みの皆様へ、<br class="sp">美味しいレシピを送ります。
   </span>
   <div class="p_home-about-img">
-    <img src="/img/common/illust/cheers.png" alt="cheers">
+    <img src="<?php echo $template_url; ?>/img/common/illust/cheers.png" alt="cheers">
   </div>
 </div>
 
@@ -38,9 +41,9 @@
     <ul class="p_home-recipes-grid pc">
       <li class="p_home-recipes-grid__item anm-up ">
         <article class="p_home-recipes-card">
-          <a href="/recipes/detail/" class="p_home-recipes-card__link">
+          <a href="<?php echo $home_url; ?>/recipes/detail/" class="p_home-recipes-card__link">
             <div class="p_home-recipes-card__img">
-              <img src="/img/common/photo/resipe01.png" alt="img" class="">
+              <img src="<?php echo $template_url; ?>/img/common/photo/recipe01.png" alt="img" class="">
               <span class="p_home-recipes-card__label-a">簡単おつまみ</span>
             </div>
             <div class="p_home-recipes-card__info">
@@ -62,9 +65,9 @@
       </li>
       <li class="p_home-recipes-grid__item anm-up">
         <article class="p_home-recipes-card">
-          <a href="/recipes/detail/" class="p_home-recipes-card__link">
+          <a href="<?php echo $home_url; ?>/recipes/detail/" class="p_home-recipes-card__link">
             <div class="p_home-recipes-card__img">
-              <img src="/img/common/photo/resipe02.png" alt="img" class="">
+              <img src="<?php echo $template_url; ?>/img/common/photo/recipe02.png" alt="img" class="">
               <span class="p_home-recipes-card__label-m">主菜のおつまみ</span>
             </div>
             <div class="p_home-recipes-card__info">
@@ -86,9 +89,9 @@
       </li>
       <li class="p_home-recipes-grid__item anm-up">
         <article class="p_home-recipes-card">
-          <a href="/recipes/detail/" class="p_home-recipes-card__link">
+          <a href="<?php echo $home_url; ?>/recipes/detail/" class="p_home-recipes-card__link">
             <div class="p_home-recipes-card__img">
-              <img src="/img/common/photo/resipe03.png" alt="img" class="">
+              <img src="<?php echo $template_url; ?>/img/common/photo/recipe03.png" alt="img" class="">
               <span class="p_home-recipes-card__label-l">〆の逸品</span>
             </div>
             <div class="p_home-recipes-card__info">
@@ -112,9 +115,9 @@
     <ul class="p_home-recipes-grid l-slider01-block__slider sp">
       <li class="p_home-recipes-grid__item anm-up">
         <article class="p_home-recipes-card">
-          <a href="/recipes/detail/" class="p_home-recipes-card__link">
+          <a href="<?php echo $home_url; ?>/recipes/detail/" class="p_home-recipes-card__link">
             <div class="p_home-recipes-card__img">
-              <img src="/img/common/photo/resipe01.png" alt="img" class="">
+              <img src="<?php echo $template_url; ?>/img/common/photo/recipe01.png" alt="img" class="">
               <span class="p_home-recipes-card__label-a">簡単おつまみ</span>
             </div>
             <div class="p_home-recipes-card__info">
@@ -136,9 +139,9 @@
       </li>
       <li class="p_home-recipes-grid__item anm-up">
         <article class="p_home-recipes-card">
-          <a href="/recipes/detail/" class="p_home-recipes-card__link">
+          <a href="<?php echo $home_url; ?>/recipes/detail/" class="p_home-recipes-card__link">
             <div class="p_home-recipes-card__img">
-              <img src="/img/common/photo/resipe02.png" alt="img" class="">
+              <img src="<?php echo $template_url; ?>/img/common/photo/recipe02.png" alt="img" class="">
               <span class="p_home-recipes-card__label-m">主菜のおつまみ</span>
             </div>
             <div class="p_home-recipes-card__info">
@@ -160,9 +163,9 @@
       </li>
       <li class="p_home-recipes-grid__item anm-up">
         <article class="p_home-recipes-card">
-          <a href="/recipes/detail/" class="p_home-recipes-card__link">
+          <a href="<?php echo $home_url; ?>/recipes/detail/" class="p_home-recipes-card__link">
             <div class="p_home-recipes-card__img">
-              <img src="/img/common/photo/resipe03.png" alt="img" class="">
+              <img src="<?php echo $template_url; ?>/img/common/photo/recipe03.png" alt="img" class="">
               <span class="p_home-recipes-card__label-l">〆の逸品</span>
             </div>
             <div class="p_home-recipes-card__info">
@@ -183,7 +186,7 @@
         </article>
       </li>
     </ul>
-    <div class="p_home-recipes__button c-button-b"><a href="/category/">View More</a><span class="ico">
+    <div class="p_home-recipes__button c-button-b"><a href="<?php echo $home_url; ?>/category/">View More</a><span class="ico">
         <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M6.83256 5.21875L1.91215 0.321713C1.75462 0.1662 1.49988 0.1662 1.34235 0.321713L0.678697 0.976859C0.521163 1.13237 0.521163 1.38384 0.678697 1.53935L4.65055 5.5L0.678697 9.46067C0.521163 9.61615 0.521163 9.86759 0.678697 10.0232L1.34235 10.6783C1.49988 10.8338 1.75462 10.8338 1.91215 10.6783L6.83256 5.78124C6.99009 5.62573 6.99009 5.37426 6.83256 5.21875Z"
@@ -200,9 +203,9 @@
 
       <li class="p_home-recipes-grid__item anm-up">
         <article class="p_home-recipes-card">
-          <a href="/recipes/detail/" class="p_home-recipes-card__link">
+          <a href="<?php echo $home_url; ?>/recipes/detail/" class="p_home-recipes-card__link">
             <div class="p_home-recipes-card__img">
-              <img src="/img/common/photo/resipe04.png" alt="img" class="">
+              <img src="<?php echo $template_url; ?>/img/common/photo/recipe04.png" alt="img" class="">
               <span class="p_home-recipes-card__label-a">簡単おつまみ</span>
             </div>
             <div class="p_home-recipes-card__info">
@@ -224,9 +227,9 @@
       </li>
       <li class="p_home-recipes-grid__item anm-up">
         <article class="p_home-recipes-card">
-          <a href="/recipes/detail/" class="p_home-recipes-card__link">
+          <a href="<?php echo $home_url; ?>/recipes/detail/" class="p_home-recipes-card__link">
             <div class="p_home-recipes-card__img">
-              <img src="/img/common/photo/resipe05.png" alt="img" class="">
+              <img src="<?php echo $template_url; ?>/img/common/photo/recipe04.png" alt="img" class="">
               <span class="p_home-recipes-card__label-m">主菜のおつまみ</span>
             </div>
             <div class="p_home-recipes-card__info">
@@ -248,9 +251,9 @@
       </li>
       <li class="p_home-recipes-grid__item anm-up">
         <article class="p_home-recipes-card">
-          <a href="/recipes/detail/" class="p_home-recipes-card__link">
+          <a href="<?php echo $home_url; ?>/recipes/detail/" class="p_home-recipes-card__link">
             <div class="p_home-recipes-card__img">
-              <img src="/img/common/photo/resipe02.png" alt="img" class="">
+              <img src="<?php echo $template_url; ?>/img/common/photo/recipe02.png" alt="img" class="">
               <span class="p_home-recipes-card__label-l">〆の逸品</span>
             </div>
             <div class="p_home-recipes-card__info">
@@ -275,9 +278,9 @@
 
       <li class="p_home-recipes-grid__item anm-up">
         <article class="p_home-recipes-card">
-          <a href="/recipes/detail/" class="p_home-recipes-card__link">
+          <a href="<?php echo $home_url; ?>/recipes/detail/" class="p_home-recipes-card__link">
             <div class="p_home-recipes-card__img">
-              <img src="/img/common/photo/resipe04.png" alt="img" class="">
+              <img src="<?php echo $template_url; ?>/img/common/photo/recipe04.png" alt="img" class="">
               <span class="p_home-recipes-card__label-a">簡単おつまみ</span>
             </div>
             <div class="p_home-recipes-card__info">
@@ -299,9 +302,9 @@
       </li>
       <li class="p_home-recipes-grid__item anm-up">
         <article class="p_home-recipes-card">
-          <a href="/recipes/detail/" class="p_home-recipes-card__link">
+          <a href="<?php echo $home_url; ?>/recipes/detail/" class="p_home-recipes-card__link">
             <div class="p_home-recipes-card__img">
-              <img src="/img/common/photo/resipe05.png" alt="img" class="">
+              <img src="<?php echo $template_url; ?>/img/common/photo/photo03.png" alt="img" class="">
               <span class="p_home-recipes-card__label-m">主菜のおつまみ</span>
             </div>
             <div class="p_home-recipes-card__info">
@@ -323,9 +326,9 @@
       </li>
       <li class="p_home-recipes-grid__item anm-up">
         <article class="p_home-recipes-card">
-          <a href="/recipes/detail/" class="p_home-recipes-card__link">
+          <a href="<?php echo $home_url; ?>/recipes/detail/" class="p_home-recipes-card__link">
             <div class="p_home-recipes-card__img">
-              <img src="/img/common/photo/resipe02.png" alt="img" class="">
+              <img src="<?php echo $template_url; ?>/img/common/photo/recipe02.png" alt="img" class="">
               <span class="p_home-recipes-card__label-l">〆の逸品</span>
             </div>
             <div class="p_home-recipes-card__info">
@@ -347,7 +350,7 @@
       </li>
     </ul>
 
-    <div class="p_home-recipes__button c-button-b"><a href="/category/">View More</a><span class="ico">
+    <div class="p_home-recipes__button c-button-b"><a href="<?php echo $home_url; ?>/category/">View More</a><span class="ico">
         <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M6.83256 5.21875L1.91215 0.321713C1.75462 0.1662 1.49988 0.1662 1.34235 0.321713L0.678697 0.976859C0.521163 1.13237 0.521163 1.38384 0.678697 1.53935L4.65055 5.5L0.678697 9.46067C0.521163 9.61615 0.521163 9.86759 0.678697 10.0232L1.34235 10.6783C1.49988 10.8338 1.75462 10.8338 1.91215 10.6783L6.83256 5.78124C6.99009 5.62573 6.99009 5.37426 6.83256 5.21875Z"
@@ -360,9 +363,9 @@
     <ul class="p_home-recipes-grid pc">
       <li class="p_home-recipes-grid__item anm-up">
         <article class="p_home-recipes-card">
-          <a href="/recipes/detail/" class="p_home-recipes-card__link">
+          <a href="<?php echo $home_url; ?>/recipes/detail/" class="p_home-recipes-card__link">
             <div class="p_home-recipes-card__img">
-              <img src="/img/common/photo/resipe01.png" alt="img" class="">
+              <img src="<?php echo $template_url; ?>/img/common/photo/recipe01.png" alt="img" class="">
               <span class="p_home-recipes-card__label-a">簡単おつまみ</span>
             </div>
             <div class="p_home-recipes-card__info">
@@ -384,9 +387,9 @@
       </li>
       <li class="p_home-recipes-grid__item anm-up">
         <article class="p_home-recipes-card">
-          <a href="/recipes/detail/" class="p_home-recipes-card__link">
+          <a href="<?php echo $home_url; ?>/recipes/detail/" class="p_home-recipes-card__link">
             <div class="p_home-recipes-card__img">
-              <img src="/img/common/photo/resipe02.png" alt="img" class="">
+              <img src="<?php echo $template_url; ?>/img/common/photo/recipe02.png" alt="img" class="">
               <span class="p_home-recipes-card__label-m">主菜のおつまみ</span>
             </div>
             <div class="p_home-recipes-card__info">
@@ -408,9 +411,9 @@
       </li>
       <li class="p_home-recipes-grid__item anm-up">
         <article class="p_home-recipes-card">
-          <a href="/recipes/detail/" class="p_home-recipes-card__link">
+          <a href="<?php echo $home_url; ?>/recipes/detail/" class="p_home-recipes-card__link">
             <div class="p_home-recipes-card__img">
-              <img src="/img/common/photo/resipe03.png" alt="img" class="">
+              <img src="<?php echo $template_url; ?>/img/common/photo/recipe03.png" alt="img" class="">
               <span class="p_home-recipes-card__label-l">〆の逸品</span>
             </div>
             <div class="p_home-recipes-card__info">
@@ -434,9 +437,9 @@
     <ul class="p_home-recipes-grid l-slider01-block__slider sp">
       <li class="p_home-recipes-grid__item anm-up">
         <article class="p_home-recipes-card">
-          <a href="/recipes/detail/" class="p_home-recipes-card__link">
+          <a href="<?php echo $home_url; ?>/recipes/detail/" class="p_home-recipes-card__link">
             <div class="p_home-recipes-card__img">
-              <img src="/img/common/photo/resipe01.png" alt="img" class="">
+              <img src="<?php echo $template_url; ?>/img/common/photo/recipe01.png" alt="img" class="">
               <span class="p_home-recipes-card__label-a">簡単おつまみ</span>
             </div>
             <div class="p_home-recipes-card__info">
@@ -458,9 +461,9 @@
       </li>
       <li class="p_home-recipes-grid__item anm-up">
         <article class="p_home-recipes-card">
-          <a href="/recipes/detail/" class="p_home-recipes-card__link">
+          <a href="<?php echo $home_url; ?>/recipes/detail/" class="p_home-recipes-card__link">
             <div class="p_home-recipes-card__img">
-              <img src="/img/common/photo/resipe02.png" alt="img" class="">
+              <img src="<?php echo $template_url; ?>/img/common/photo/recipe02.png" alt="img" class="">
               <span class="p_home-recipes-card__label-m">主菜のおつまみ</span>
             </div>
             <div class="p_home-recipes-card__info">
@@ -482,9 +485,9 @@
       </li>
       <li class="p_home-recipes-grid__item anm-up">
         <article class="p_home-recipes-card">
-          <a href="/recipes/detail/" class="p_home-recipes-card__link">
+          <a href="<?php echo $home_url; ?>/recipes/detail/" class="p_home-recipes-card__link">
             <div class="p_home-recipes-card__img">
-              <img src="/img/common/photo/resipe03.png" alt="img" class="">
+              <img src="<?php echo $template_url; ?>/img/common/photo/recipe03.png" alt="img" class="">
               <span class="p_home-recipes-card__label-l">〆の逸品</span>
             </div>
             <div class="p_home-recipes-card__info">
@@ -505,7 +508,7 @@
         </article>
       </li>
     </ul>
-    <div class="p_home-recipes__button c-button-b"><a href="/category/">View More</a><span class="ico">
+    <div class="p_home-recipes__button c-button-b"><a href="<?php echo $home_url; ?>/category/">View More</a><span class="ico">
         <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M6.83256 5.21875L1.91215 0.321713C1.75462 0.1662 1.49988 0.1662 1.34235 0.321713L0.678697 0.976859C0.521163 1.13237 0.521163 1.38384 0.678697 1.53935L4.65055 5.5L0.678697 9.46067C0.521163 9.61615 0.521163 9.86759 0.678697 10.0232L1.34235 10.6783C1.49988 10.8338 1.75462 10.8338 1.91215 10.6783L6.83256 5.78124C6.99009 5.62573 6.99009 5.37426 6.83256 5.21875Z"
@@ -515,7 +518,7 @@
     </div>
   </div>
 </section>
-<div class="p_home-recipes__button c-button-a"><a href="/recipes/">全てのレシピを見る</a>
+<div class="p_home-recipes__button c-button-a"><a href="<?php echo $home_url; ?>/recipes/">全てのレシピを見る</a>
   <span class="ico">
     <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -541,7 +544,7 @@
         初心者からプロまで、<br class="sp">だれでも役立つ情報が満載です。
       </span>
       <div class="p_home-tips-img">
-        <img src="/img/common/illust/vine.png" alt="cheers">
+        <img src="<?php echo $template_url; ?>/img/common/illust/vine.png" alt="cheers">
       </div>
       <div class="p_home-tab" id="js-tab">
         <div class="p_home-tab-nav">
@@ -551,19 +554,19 @@
         </div>
         <div class="p_home-tab-contents">
           <div class="p_home-tab-contents__item" data-content="0">
-            <a href="/technique/cat/detail/">
+            <a href="<?php echo $home_url; ?>/technique/cat/detail/">
               <div class="p_home-tab-contents__content">
                 <div class="label-cat">
-                  <img src="/img/common/icon/knife.png" alt="label">
+                  <img src="<?php echo $template_url; ?>/img/common/icon/knife.png" alt="label">
 
                 </div>
                 <p class="tite">硬いものを切るとき</p>
               </div>
             </a>
-            <a href="/technique/cat/detail/">
+            <a href="<?php echo $home_url; ?>/technique/cat/detail/">
               <div class="p_home-tab-contents__content">
                 <div class="label-cat">
-                  <img src="/img/common/icon/knife.png" alt="label">
+                  <img src="<?php echo $template_url; ?>/img/common/icon/knife.png" alt="label">
 
                 </div>
                 <p class="tite">細かい作業をするとき</p>
@@ -571,36 +574,36 @@
             </a>
           </div>
           <div class="p_home-tab-contents__item" data-content="1">
-            <a href="/technique/cat/detail/">
+            <a href="<?php echo $home_url; ?>/technique/cat/detail/">
               <div class="p_home-tab-contents__content">
                 <div class="label-cat">
-                  <img src="/img/common/icon/peel.png" alt="label">
+                  <img src="<?php echo $template_url; ?>/img/common/icon/peel.png" alt="label">
                 </div>
                 <p class="tite">長いもの皮</p>
               </div>
             </a>
-            <a href="/technique/cat/detail/">
+            <a href="<?php echo $home_url; ?>/technique/cat/detail/">
               <div class="p_home-tab-contents__content">
                 <div class="label-cat">
-                  <img src="/img/common/icon/peel.png" alt="label">
+                  <img src="<?php echo $template_url; ?>/img/common/icon/peel.png" alt="label">
                 </div>
                 <p class="tite">大根の皮</p>
               </div>
             </a>
           </div>
           <div class="p_home-tab-contents__item" data-content="2">
-            <a href="/technique/cat/detail/">
+            <a href="<?php echo $home_url; ?>/technique/cat/detail/">
               <div class="p_home-tab-contents__content">
                 <div class="label-cat">
-                  <img src="/img/common/icon/pre.png" alt="label">
+                  <img src="<?php echo $template_url; ?>/img/common/icon/pre.png" alt="label">
                 </div>
                 <p class="tite">砂ぎもの下処理</p>
               </div>
             </a>
-            <a href="/technique/cat/detail/">
+            <a href="<?php echo $home_url; ?>/technique/cat/detail/">
               <div class="p_home-tab-contents__content">
                 <div class="label-cat">
-                  <img src="/img/common/icon/pre.png" alt="label">
+                  <img src="<?php echo $template_url; ?>/img/common/icon/pre.png" alt="label">
                 </div>
                 <p class="tite">オニオンスライスの下処理</p>
               </div>
@@ -608,7 +611,7 @@
           </div>
         </div>
       </div>
-      <div class="p_home-tech__button c-button-b"><a href="/technique/">Viw More</a>
+      <div class="p_home-tech__button c-button-b"><a href="<?php echo $home_url; ?>/technique/">Viw More</a>
         <span class="ico">
           <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -624,7 +627,7 @@
 <!-- 休肝日 -->
 <!-- <section class="p_home-health">
     <div class="p_home-health-img">
-      <img src="/img/common/illust/draftbeer.png" alt="cheers">
+      <img src="<?php echo $template_url; ?>/img/common/illust/draftbeer.png" alt="cheers">
     </div>
 
     <h1 class="p_home-health__headline">休肝日を作ろう</h1>
@@ -637,9 +640,9 @@
       </span>
     </div>
     <div class="p_home-health-banner">
-      <a href="#">
+      <a href="<?php echo $home_url; ?>#">
         <div class="p_home-health-banner__img">
-          <img src="/img/common/logo/health-logo.png" alt="">
+          <img src="<?php echo $template_url; ?>/img/common/logo/health-logo.png" alt="">
         </div>
       </a>
     </div>
