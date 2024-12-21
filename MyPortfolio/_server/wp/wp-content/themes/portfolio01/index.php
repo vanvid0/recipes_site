@@ -304,7 +304,7 @@ global $home_url;
         <article class="p_home-recipes-card">
           <a href="<?php echo $home_url; ?>/recipes/detail/" class="p_home-recipes-card__link">
             <div class="p_home-recipes-card__img">
-              <img src="<?php echo $template_url; ?>/img/common/photo/photo03.png" alt="img" class="">
+              <img src="<?php echo $template_url; ?>/img/common/photo/recipe01.png" alt="img" class="">
               <span class="p_home-recipes-card__label-m">主菜のおつまみ</span>
             </div>
             <div class="p_home-recipes-card__info">

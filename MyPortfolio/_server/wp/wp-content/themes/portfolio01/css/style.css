@@ -614,6 +614,30 @@ footer {
   line-height: 1.5;
 }
 
+.category-label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  text-align: center;
+  border-radius: 0 10px 0 0;
+}
+.category-label.knife {
+  background-color: #426511;
+}
+.category-label.pre {
+  background-color: #A85201;
+}
+.category-label.peer {
+  background-color: #8C6600;
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+}
+
 .c-label-a {
   padding: 5px 20px;
   font-size: 12px;
@@ -808,7 +832,7 @@ footer {
 #pagetop a {
   width: 50px;
   height: 50px;
-  display: block;
+  display: none;
   border-radius: 62px;
   background-color: #e9a2af;
 }
@@ -1623,27 +1647,6 @@ button.slick-arrow.slick-next {
   display: block;
 }
 
-.p_tech__content {
-  margin: 14px auto 0;
-  max-width: 744px;
-  height: 66px;
-  background-color: #fff;
-  text-align: left;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 20px;
-  border-radius: 10px;
-  -webkit-box-shadow: 2px 2px 6px #ccc;
-          box-shadow: 2px 2px 6px #ccc;
-  position: relative;
-}
-.p_tech__content .label-cat {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
 /* -----------------------------------------------
 * home Module
 * homeページ用
@@ -1938,5 +1941,4 @@ button.slick-arrow.slick-next {
     gap: 20px;
   }
 }
-/*# sourceMappingURL=style.css.map */
 /*# sourceMappingURL=style.css.map */

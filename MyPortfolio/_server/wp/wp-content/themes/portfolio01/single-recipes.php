@@ -7,10 +7,10 @@ global $home_url;
 <main class="outer-block p_home">
   <div class="p_recipes-mv">
     <div class="p_recipes-mv__img">
-      <img src="/img/common/mv/menu.png" alt="mainvisual">
+      <img src="<?php echo $template_url; ?>/img/common/mv/menu.png" alt="mainvisual">
     </div>
     <div class="p_recipes-mv__ttl">
-      <img src="/img/common/logo/lemon.png" alt="">
+      <img src="<?php echo $template_url; ?>/img/common/logo/lemon.png" alt="">
     </div>
   </div>
   <div class="p_recipes-map">
@@ -54,7 +54,9 @@ global $home_url;
       <div class="p_recipes-grid1">
         <div class="p_detail-grid2">
           <div class="p_detail-img">
-            <img src="/img/common/detail/detail.png" alt="">
+            <?php if (has_post_thumbnail()): ?>
+              <?php the_post_thumbnail(); ?>
+            <?php endif; ?>
           </div>
           <div class="p_detail-ingredients">
             <span class="title">材料(2人前)</span>
@@ -131,6 +133,5 @@ global $home_url;
     </div>
   </section>
 </main>
-
 
 <?php get_footer(); ?>
