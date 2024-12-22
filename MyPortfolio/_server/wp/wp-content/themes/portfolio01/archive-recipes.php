@@ -60,18 +60,23 @@ global $home_url;
                       <?php else: ?>
                         <img src="<?php echo esc_url(get_theme_file_uri('/images/ph.png')); ?>" alt="">
                       <?php endif; ?>
-                      <span class="p_home-recipes-card__label-a"><?php
-                    $taxonomy = 'recipes-cat';
-                    $terms = get_the_terms(get_the_ID(), $taxonomy);
+                   
+                        <!-- カテゴリーとってくる -->
+                        <?php
+                        $taxonomy = 'recipes-cat';
+                        $terms = get_the_terms(get_the_ID(), $taxonomy);
 
-                    if ($terms && !is_wp_error($terms)) {
-                      foreach ($terms as $term) {
-                        echo '<span class="category">' . esc_html($term->name) . '</span>';
-                      }
-                    } else {
-                      echo '<span class="category">カテゴリーなし</span>';
+                        if ($terms && !is_wp_error($terms)) {
+                          foreach ($terms as $term) {
+                      echo '<span class="recipes-category-label tech-text ' . esc_attr($term->slug) . '">' . esc_html($term->name) . '</span>';
                     }
-                    ?></span>
+                  } else {
+                    echo '<span class="recipes-category-label default-label">カテゴリーなし</span>';
+                  }
+                  ?>
+                        
+                      
+
                     </div>
                     <div class="p_home-recipes-card__info">
                       <h3 class="p_home-recipes-card__headline"><?php the_title(); ?></h3>
@@ -91,38 +96,58 @@ global $home_url;
                   </a>
                 </article>
               </li>
-              <<?php endwhile;
+              <?php endwhile;
             endif; ?>
                 </ul>
                 <ul class="p_recipes-grid2 l-slider01-block__slider sp">
-                  <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                      <li class="p_recipes-grid__item anm-up">
-                        <article class="p_home-recipes-card">
-                          <a href="<?php the_permalink(); ?>" class="p_home-recipes-card__link">
-                            <div class="p_home-recipes-card__img">
-                              <img src="/img/common/photo/resipe01.png" alt="img" class="">
-                              <span class="p_home-recipes-card__label-a"><?php the_category() ?></span>
-                            </div>
-                            <div class="p_home-recipes-card__info">
-                              <h3 class="p_home-recipes-card__headline"><?php the_title(); ?></h3>
-                              <p class="p_home-recipes-card__description">
-                                <?php the_content(); ?>
-                              </p>
-                              <div class="p_home-recipes-card__button c-button-s">レシピを見る
-                                <span class="ico">
-                                  <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                      d="M6.83256 5.21875L1.91215 0.321713C1.75462 0.1662 1.49988 0.1662 1.34235 0.321713L0.678697 0.976859C0.521163 1.13237 0.521163 1.38384 0.678697 1.53935L4.65055 5.5L0.678697 9.46067C0.521163 9.61615 0.521163 9.86759 0.678697 10.0232L1.34235 10.6783C1.49988 10.8338 1.75462 10.8338 1.91215 10.6783L6.83256 5.78124C6.99009 5.62573 6.99009 5.37426 6.83256 5.21875Z"
-                                      fill="#fff" />
-                                  </svg>
-                                </span>
-                              </div>
-                            </div>
-                          </a>
-                        </article>
-                      </li>
-                      <<?php endwhile;
-                    endif; ?>
+                <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+              <li class="p_recipes-grid__item anm-up">
+                <article class="p_home-recipes-card">
+                  <a href="<?php the_permalink(); ?>" class="p_home-recipes-card__link">
+                    <div class="p_home-recipes-card__img">
+                      <?php if (has_post_thumbnail()): ?>
+                        <?php the_post_thumbnail(); ?>
+                      <?php else: ?>
+                        <img src="<?php echo esc_url(get_theme_file_uri('/images/ph.png')); ?>" alt="">
+                      <?php endif; ?>
+                   
+                        <!-- カテゴリーとってくる -->
+                        <?php
+                        $taxonomy = 'recipes-cat';
+                        $terms = get_the_terms(get_the_ID(), $taxonomy);
+
+                        if ($terms && !is_wp_error($terms)) {
+                          foreach ($terms as $term) {
+                      echo '<span class="recipes-category-label tech-text ' . esc_attr($term->slug) . '">' . esc_html($term->name) . '</span>';
+                    }
+                  } else {
+                    echo '<span class="recipes-category-label default-label">カテゴリーなし</span>';
+                  }
+                  ?>
+                        
+                      
+
+                    </div>
+                    <div class="p_home-recipes-card__info">
+                      <h3 class="p_home-recipes-card__headline"><?php the_title(); ?></h3>
+                      <p class="p_home-recipes-card__description">
+                        <?php the_content(); ?>
+                      </p>
+                      <div class="p_home-recipes-card__button c-button-s">レシピを見る
+                        <span class="ico">
+                          <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M6.83256 5.21875L1.91215 0.321713C1.75462 0.1662 1.49988 0.1662 1.34235 0.321713L0.678697 0.976859C0.521163 1.13237 0.521163 1.38384 0.678697 1.53935L4.65055 5.5L0.678697 9.46067C0.521163 9.61615 0.521163 9.86759 0.678697 10.0232L1.34235 10.6783C1.49988 10.8338 1.75462 10.8338 1.91215 10.6783L6.83256 5.78124C6.99009 5.62573 6.99009 5.37426 6.83256 5.21875Z"
+                              fill="#fff" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                  </a>
+                </article>
+              </li>
+              <?php endwhile;
+            endif; ?>
                         </ul>
                         <div class="c-recipes-cat">
                           <span class="title">お酒の種類から探す</span>

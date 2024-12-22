@@ -66,8 +66,14 @@ function custom_posttype()
       'show_ui' => true,
       'show_in_rest' => true,
       'public' => true
-    )
-  );
+    ));
+  register_taxonomy('recipes-tag','recipes', array(
+    'hierarchical' => false,
+    'label' => 'タグ',
+    'show_ui' => true,
+    'show_in_rest' => true,
+    'public' => true
+  ));
 
   register_post_type('technique', array(
     'labels' => array(

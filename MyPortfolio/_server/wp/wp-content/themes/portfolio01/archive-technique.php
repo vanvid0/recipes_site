@@ -30,28 +30,27 @@ global $home_url;
 
       <div class="p_tech-grid1">
         <div class="p_tech-grid1-item">
-        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-    <a href="<?php the_permalink(); ?>">
-        <div class="p_tech__content">
-          
-                <?php
-                $taxonomy = 'technique-cat'; 
-                $terms = get_the_terms(get_the_ID(), $taxonomy);
+          <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+              <a href="<?php the_permalink(); ?>">
+                <div class="p_tech__content">
 
-                if ($terms && !is_wp_error($terms)) {
+                  <?php
+                  $taxonomy = 'technique-cat';
+                  $terms = get_the_terms(get_the_ID(), $taxonomy);
+                  if ($terms && !is_wp_error($terms)) {
                     foreach ($terms as $term) {
-                        
-                        echo '<span class="category-label tech-text ' . esc_attr($term->slug) . '">' . esc_html($term->name) . '</span>';
+                      echo '<span class="category-label tech-text ' . esc_attr($term->slug) . '">' . esc_html($term->name) . '</span>';
                     }
-                } else {
+                  } else {
                     echo '<span class="category-label default-label">カテゴリーなし</span>';
-                }
-                ?>
-            
-            <p class="title"><?php the_title(); ?></p>
-        </div>
-    </a>
-<?php endwhile; endif; ?>
+                  }
+                  ?>
+
+                  <p class="title"><?php the_title(); ?></p>
+                </div>
+              </a>
+          <?php endwhile;
+          endif; ?>
 
         </div>
         <div class="c-cap">
