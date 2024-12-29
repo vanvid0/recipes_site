@@ -60,22 +60,22 @@ global $home_url;
                       <?php else: ?>
                         <img src="<?php echo esc_url(get_theme_file_uri('/images/ph.png')); ?>" alt="">
                       <?php endif; ?>
-                   
-                        <!-- カテゴリーとってくる -->
-                        <?php
-                        $taxonomy = 'recipes-cat';
-                        $terms = get_the_terms(get_the_ID(), $taxonomy);
 
-                        if ($terms && !is_wp_error($terms)) {
-                          foreach ($terms as $term) {
-                      echo '<span class="recipes-category-label tech-text ' . esc_attr($term->slug) . '">' . esc_html($term->name) . '</span>';
-                    }
-                  } else {
-                    echo '<span class="recipes-category-label default-label">カテゴリーなし</span>';
-                  }
-                  ?>
-                        
-                      
+                      <!-- カテゴリーとってくる -->
+                      <?php
+                      $taxonomy = 'recipes-cat';
+                      $terms = get_the_terms(get_the_ID(), $taxonomy);
+
+                      if ($terms && !is_wp_error($terms)) {
+                        foreach ($terms as $term) {
+                          echo '<span class="recipes-category-label tech-text ' . esc_attr($term->slug) . '">' . esc_html($term->name) . '</span>';
+                        }
+                      } else {
+                        echo '<span class="recipes-category-label default-label">カテゴリーなし</span>';
+                      }
+                      ?>
+
+
 
                     </div>
                     <div class="p_home-recipes-card__info">
@@ -96,11 +96,11 @@ global $home_url;
                   </a>
                 </article>
               </li>
-              <?php endwhile;
-            endif; ?>
-                </ul>
-                <ul class="p_recipes-grid2 l-slider01-block__slider sp">
-                <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+          <?php endwhile;
+          endif; ?>
+        </ul>
+        <ul class="p_recipes-grid2 l-slider01-block__slider sp">
+          <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
               <li class="p_recipes-grid__item anm-up">
                 <article class="p_home-recipes-card">
                   <a href="<?php the_permalink(); ?>" class="p_home-recipes-card__link">
@@ -110,28 +110,28 @@ global $home_url;
                       <?php else: ?>
                         <img src="<?php echo esc_url(get_theme_file_uri('/images/ph.png')); ?>" alt="">
                       <?php endif; ?>
-                   
-                        <!-- カテゴリーとってくる -->
-                        <?php
-                        $taxonomy = 'recipes-cat';
-                        $terms = get_the_terms(get_the_ID(), $taxonomy);
 
-                        if ($terms && !is_wp_error($terms)) {
-                          foreach ($terms as $term) {
-                      echo '<span class="recipes-category-label tech-text ' . esc_attr($term->slug) . '">' . esc_html($term->name) . '</span>';
-                    }
-                  } else {
-                    echo '<span class="recipes-category-label default-label">カテゴリーなし</span>';
-                  }
-                  ?>
-                        
-                      
+                      <!-- カテゴリーとってくる -->
+                      <?php
+                      $taxonomy = 'recipes-cat';
+                      $terms = get_the_terms(get_the_ID(), $taxonomy);
+
+                      if ($terms && !is_wp_error($terms)) {
+                        foreach ($terms as $term) {
+                          echo '<span class="recipes-category-label tech-text ' . esc_attr($term->slug) . '">' . esc_html($term->name) . '</span>';
+                        }
+                      } else {
+                        echo '<span class="recipes-category-label default-label">カテゴリーなし</span>';
+                      }
+                      ?>
+
+
 
                     </div>
                     <div class="p_home-recipes-card__info">
                       <h3 class="p_home-recipes-card__headline"><?php the_title(); ?></h3>
                       <p class="p_home-recipes-card__description">
-                        <?php the_content(); ?>
+                      <?php the_excerpt(); ?>
                       </p>
                       <div class="p_home-recipes-card__button c-button-s">レシピを見る
                         <span class="ico">
@@ -146,19 +146,19 @@ global $home_url;
                   </a>
                 </article>
               </li>
-              <?php endwhile;
-            endif; ?>
-                        </ul>
-                        <div class="c-recipes-cat">
-                          <span class="title">お酒の種類から探す</span>
-                          <a href="/category/" class="text-b">ビールに合うレシピ</a>
-                          <a href="/category/" class="text-b">ハイボールに合うレシピ</a>
-                          <a href="/category/" class="text-b">ワインに合うレシピ</a>
-                          <span class="c-recipes-cat__b title">料理の種類から探す</span>
-                          <a href="/category/" class="text-b">簡単おつまみ</a>
-                          <a href="/category/" class="text-b">主菜のおつまみ</a>
-                          <a href="/category/" class="text-b">〆の逸品</a>
-                        </div>
+          <?php endwhile;
+          endif; ?>
+        </ul>
+        <div class="c-recipes-cat">
+          <span class="title">お酒の種類から探す</span>
+          <a href="<?php echo $home_url; ?>/recipes-drink/beer/" class="text-b">ビールに合うレシピ</a>
+          <a href="<?php echo $home_url; ?>/recipes-drink/highball/" class="text-b">ハイボールに合うレシピ</a>
+          <a href="<?php echo $home_url; ?>/recipes-drink/wine/" class="text-b">ワインに合うレシピ</a>
+          <span class="c-recipes-cat__b title">料理の種類から探す</span>
+          <a href="<?php echo $home_url; ?>/recipes-cat/appetizer/" class="text-b">簡単おつまみ</a>
+          <a href="<?php echo $home_url; ?>/recipes-cat/main/" class="text-b">主菜のおつまみ</a>
+          <a href="<?php echo $home_url; ?>/recipes-cat/last/" class="text-b">〆の逸品</a>
+        </div>
       </div>
     </div>
   </section>

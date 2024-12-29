@@ -3,7 +3,8 @@ $home_url = get_bloginfo('url');
 $template_url = get_bloginfo('template_directory');
 
 
-
+//抜粋を表示
+ add_post_type_support( 'recipes' , 'excerpt' );
 
 
 //ショートコード
@@ -56,24 +57,28 @@ function custom_posttype()
     'menu_position' => 5,
     'supports' => array('title', 'editor', 'thumbnail'),
     'show_in_rest' => true,
+    
   ));
   register_taxonomy(
     'recipes-cat',
     'recipes',
     array(
       'hierarchical' => true,
-      'label' => 'カテゴリー',
+      'label' => '料理の種類',
       'show_ui' => true,
       'show_in_rest' => true,
       'public' => true
     ));
-  register_taxonomy('recipes-tag','recipes', array(
-    'hierarchical' => false,
-    'label' => 'タグ',
-    'show_ui' => true,
-    'show_in_rest' => true,
-    'public' => true
-  ));
+    register_taxonomy(
+      'recipes-drink',
+      'recipes',
+      array(
+        'hierarchical' => true,
+        'label' => 'お酒の種類',
+        'show_ui' => true,
+        'show_in_rest' => true,
+        'public' => true
+      ));
 
   register_post_type('technique', array(
     'labels' => array(

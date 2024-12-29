@@ -700,7 +700,7 @@ footer {
 }
 
 .c-recipes-cat {
-  max-width: 248px;
+  min-width: 190px;
   text-align: center;
 }
 .c-recipes-cat span.title {
@@ -1353,11 +1353,6 @@ button.slick-arrow.slick-next {
   position: absolute;
   top: 0;
   right: 0;
-}
-.p_home-tab-contents__content span {
-  position: absolute;
-  top: 0;
-  right: 36px;
 }
 
 .p_home-tech__button {

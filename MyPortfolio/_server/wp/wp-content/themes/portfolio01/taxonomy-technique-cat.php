@@ -10,7 +10,10 @@ global $home_url;
       <img src="<?php echo $template_url; ?>/img/common/mv/menu.png" alt="mainvisual">
     </div>
     <div class="p_recipes-mv__ttl">
-      <img src="<?php echo $template_url; ?>/img/common/logo/technique.png" alt="">
+    <?php
+      $term_object = get_queried_object();
+      echo esc_html($term_object->name);
+      ?>
     </div>
   </div>
   <div class="p_recipes-map">
@@ -27,10 +30,32 @@ global $home_url;
   <section class="p_recipes">
     <div class="inner-block">
 
-
+    <h2 class="p_home-recipes__with-b">
+        <?php
+        $term_object = get_queried_object(); 
+        echo esc_html($term_object->name); 
+        ?>
+      </h2>
       <div class="p_tech-grid1">
+     
+      <?php
+      $term_object = get_queried_object(); // 現在のタクソノミーオブジェクトを取得
+      $term_slug = $term_object->slug; // スラッグを取得
+      $args = array(
+        'post_type' => 'technique', // カスタム投稿タイプ
+        'posts_per_page' => -1, // 全件取得
+        'tax_query' => array(
+          array(
+            'taxonomy' => 'technique-cat', // タクソノミー名
+            'field' => 'slug', // スラッグで検索
+            'terms' => $term_slug // 取得したスラッグを使用
+          ),
+        ),
+      );
+      $the_query = new WP_Query($args);
+      ?>
         <div class="p_tech-grid1-item">
-          <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+          <?php if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
               <a href="<?php the_permalink(); ?>">
                 <div class="p_tech__content">
 

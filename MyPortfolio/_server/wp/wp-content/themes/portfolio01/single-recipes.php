@@ -10,7 +10,7 @@ global $home_url;
       <img src="<?php echo $template_url; ?>/img/common/mv/menu.png" alt="mainvisual">
     </div>
     <div class="p_recipes-mv__ttl">
-      <img src="<?php echo $template_url; ?>/img/common/logo/lemon.png" alt="">
+      <?php the_title(); ?>
     </div>
   </div>
   <div class="p_recipes-map">
@@ -52,83 +52,68 @@ global $home_url;
         </select>
       </div>
       <div class="p_recipes-grid1">
-        <div class="p_detail-grid2">
-          <div class="p_detail-img">
-            <?php if (has_post_thumbnail()): ?>
-              <?php the_post_thumbnail(); ?>
-            <?php endif; ?>
-          </div>
-          <div class="p_detail-ingredients">
-            <span class="title">材料(2人前)</span>
-            <table class="p_detail-ingredients__table">
-              <tr class="p_detail-ingredients__table__tr">
-                <th class="p_detail-ingredients__table__th text
-                     text">・レモン</th>
-                <td class="p_detail-ingredients__table__td text-b
-                    ">1個</td>
-              </tr>
-              <tr class="p_detail-ingredients__table__tr">
-                <th class="p_detail-ingredients__table__th text
-                    ">・バター</th>
-                <td class="p_detail-ingredients__table__td text-b
-                    ">30g</td>
-              </tr>
-              <tr class="p_detail-ingredients__table__tr">
-                <th class="p_detail-ingredients__table__th text
-                    ">・えび</th>
-                <td class="p_detail-ingredients__table__td text-b
-                    ">5尾</td>
-              </tr>
-              <tr class="p_detail-ingredients__table__tr">
-                <th class="p_detail-ingredients__table__th text
-                    ">・白髪ねぎ</th>
-                <td class="p_detail-ingredients__table__td text-b
-                    ">適量</td>
-              </tr>
-              <tr class="p_detail-ingredients__table__tr">
-                <th class="p_detail-ingredients__table__th text
-                    ">・みつば</th>
-                <td class="p_detail-ingredients__table__td text-b
-                    ">適量</td>
-              </tr>
-              <tr class="p_detail-ingredients__table__tr">
-                <th class="p_detail-ingredients__table__th text
-                    ">・塩</th>
-                <td class="p_detail-ingredients__table__td text-b
-                    ">小さじ2</td>
-              </tr>
-              <tr class="p_detail-ingredients__table__tr">
-                <th class="p_detail-ingredients__table__th text
-                    ">・ブラックペッパー</th>
-                <td class="p_detail-ingredients__table__td text-b
-                    ">適量</td>
-              </tr>
-            </table>
-          </div>
-          <div class="p_detail-how">
-            <span class="title">作り方</span>
-            <ol class="p_detail-how__to
-                ">
-              <li class="p_detail-how__do text-r">
-                肉切るとかテキストテキストテキストテキスト
-              </li>
-              <li class="p_detail-how__do text-r">
-                肉焼く<br>
-                <a href="#">お肉の上手な焼き方はこちら</a>
-              </li>
-            </ol>
-          </div>
-        </div>
-        <div class="c-recipes-cat">
-          <span class="title">お酒の種類から探す</span>
-          <a href="#" class="text-b">ビールに合うレシピ</a>
-          <a href="#" class="text-b">ハイボールに合うレシピ</a>
-          <a href="#" class="text-b">ワインに合うレシピ</a>
-          <span class="c-recipes-cat__b title">料理の種類から探す</span>
-          <a href="#" class="text-b">簡単おつまみ</a>
-          <a href="#" class="text-b">主菜のおつまみ</a>
-          <a href="#" class="text-b">〆の逸品</a>
-        </div>
+        <?php
+        if (have_posts()) :
+          while (have_posts()) :
+            the_post();
+        ?>
+            <div class="p_detail-grid2">
+              <div class="p_detail-img">
+                <?php if (has_post_thumbnail()): ?>
+                  <?php the_post_thumbnail(); ?>
+                <?php endif; ?>
+              </div>
+              <div class="p_detail-ingredients">
+                <span class="title">材料(2人前)</span>
+                <table class="p_detail-ingredients__table">
+
+                  <?php for ($i = 1; $i <= 10; $i++): // 最大10項目を想定 
+                  ?>
+                    <?php
+                    $name = get_field("ingredient_{$i}_name");
+                    $quantity = get_field("ingredient_{$i}_quantity");
+                    if ($name && $quantity): ?>
+                      <tr class="p_detail-ingredients__table__tr">
+                        <th class="p_detail-ingredients__table__th"><?php echo esc_html($name); ?></th>
+                        <td class="p_detail-ingredients__table__td"><?php echo esc_html($quantity); ?></td>
+                      </tr>
+                    <?php endif; ?>
+                  <?php endfor; ?>
+                </table>
+              </div>
+              <div class="p_detail-how">
+                <span class="title">作り方</span>
+                <ol class="p_detail-how__to">
+
+                  <?php for ($i = 1; $i <= 10; $i++): // 最大10項目を想定 
+                  ?>
+                    <?php
+                    $step = get_field("step_{$i}");
+                    if ($step): ?>
+                      <li class="p_detail-how__do text-r"><?php echo esc_html($step); ?></li>
+                    <?php endif; ?>
+                  <?php endfor; ?>
+                </ol>
+
+                <?php endwhile;        endif; ?>
+
+              </div>
+              <div class="p_detail-how__point">
+                <span class="title">コツ・ポイント</span>
+                <?php the_excerpt(); ?>
+              </div>
+            </div>
+
+            <div class="c-recipes-cat">
+              <span class="title">お酒の種類から探す</span>
+              <a href="<?php echo $home_url; ?>/recipes-drink/beer/" class="text-b">ビールに合うレシピ</a>
+              <a href="<?php echo $home_url; ?>/recipes-drink/highball/" class="text-b">ハイボールに合うレシピ</a>
+              <a href="<?php echo $home_url; ?>/recipes-drink/wine/" class="text-b">ワインに合うレシピ</a>
+              <span class="c-recipes-cat__b title">料理の種類から探す</span>
+              <a href="<?php echo $home_url; ?>/recipes-cat/appetizer/" class="text-b">簡単おつまみ</a>
+              <a href="<?php echo $home_url; ?>/recipes-cat/main/" class="text-b">主菜のおつまみ</a>
+              <a href="<?php echo $home_url; ?>/recipes-cat/last/" class="text-b">〆の逸品</a>
+            </div>
       </div>
     </div>
   </section>

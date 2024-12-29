@@ -39,24 +39,24 @@ global $home_url;
       <span class="c-header-menu-recipes text-b">レシピを探す</span>
       <a href="<?php echo $home_url; ?>/recipes/" class="c-header-menu-recipes__all title">レシピ一覧</a>
       <div class="c-header-menu-recipes__cat">
-        <a href="<?php echo $home_url; ?>/category/" class="text-b">お酒の種類から探す</a>
-        <a href="<?php echo $home_url; ?>/category/" class="text">ビールに合うレシピ</a>
-        <a href="<?php echo $home_url; ?>/category/" class="text">ハイボールに合うレシピ</a>
-        <a href="<?php echo $home_url; ?>/category/" class="text">ワインに合うレシピ</a>
+        <a href="<?php echo $home_url; ?>/recipes/" class="text-b">お酒の種類から探す</a>
+        <a href="<?php echo $home_url; ?>/recipes-drink/beer/" class="text-b">ビールに合うレシピ</a>
+          <a href="<?php echo $home_url; ?>/recipes-drink/highball/" class="text-b">ハイボールに合うレシピ</a>
+          <a href="<?php echo $home_url; ?>/recipes-drink/wine/" class="text-b">ワインに合うレシピ</a>
       </div>
       <div class="c-header-menu-recipes__cat">
         <a href="<?php echo $home_url; ?>/recipes/" class="text-b">料理の種類から探す</a>
-        <a href="<?php echo $home_url; ?>/recipes/" class="text">簡単おつまみ</a>
-        <a href="<?php echo $home_url; ?>/recipes/" class="text">主菜のおつまみ</a>
-        <a href="<?php echo $home_url; ?>/recipes/" class="text">〆の逸品</a>
+        <a href="<?php echo $home_url; ?>/recipes-cat/appetizer/" class="text-b">簡単おつまみ</a>
+          <a href="<?php echo $home_url; ?>/recipes-cat/main/" class="text-b">主菜のおつまみ</a>
+          <a href="<?php echo $home_url; ?>/recipes-cat/last/" class="text-b">〆の逸品</a>
       </div>
 
       <div class="c-header-menu-tech">
         <span class=" text-b">料理のコツ</span>
         <a href="<?php echo $home_url; ?>/technique/" class="title">料理のコツ一覧</a>
-        <a href="<?php echo $home_url; ?>/technique/cat/detail/" class="text">包丁の持ち方</a>
-        <a href="<?php echo $home_url; ?>/technique/cat/detail/" class="text">下処理・下準備</a>
-        <a href="<?php echo $home_url; ?>/technique/cat/detail/" class="text">皮活用</a>
+        <a href="<?php echo $home_url; ?>/technique-cat/knife/" class="text-b">包丁の持ち方</a>
+            <a href="<?php echo $home_url; ?>/technique-cat/pre/" class="text-b">下処理・下準備</a>
+            <a href="<?php echo $home_url; ?>/technique-cat/peer/" class="text-b">皮活用</a>
       </div>
       <!-- <div class="c-header-health">
         <a href="<?php echo $home_url; ?>#">
