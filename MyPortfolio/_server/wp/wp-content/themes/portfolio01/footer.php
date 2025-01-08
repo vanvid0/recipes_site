@@ -63,7 +63,8 @@ global $home_url;
   <script src="<?php echo $template_url; ?>/js/hambeurger.js"></script>
   <script src="<?php echo $template_url; ?>/js/tab.js"></script>
   <script src="<?php echo $template_url; ?>/js/lib/jquery-3.7.1.min.js"></script>
-  <script type="text/javascript" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <!-- <script type="text/javascript" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+  <script src="<?php echo $template_url; ?>/js/lib/slick.min.js"></script>
   <script src="<?php echo $template_url; ?>/js/common.js"></script>
   <?php wp_footer(); ?>
 </body>

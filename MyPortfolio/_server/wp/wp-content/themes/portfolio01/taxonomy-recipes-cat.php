@@ -153,7 +153,7 @@ global $home_url;
                     <div class="p_home-recipes-card__info">
                       <h3 class="p_home-recipes-card__headline"><?php the_title(); ?></h3>
                       <p class="p_home-recipes-card__description">
-                        <?php the_content(); ?>
+                      <?php the_excerpt(); ?>
                       </p>
                       <div class="p_home-recipes-card__button c-button-s">レシピを見る
                         <span class="ico">

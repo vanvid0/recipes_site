@@ -8,8 +8,8 @@ global $home_url;
 
   <div class="p_home-mv">
     <div class="p_home-mv__img">
-      <img src="https://dummyimage.com/2732x1211/000/fff" class="pc" alt="mainvisual">
-      <img src="https://dummyimage.com/375x474/000/fff" class="sp" alt="mainvisual">
+    <img src="<?php echo get_template_directory_uri(); ?>/img/common/mv/mv.jpg" class="pc" alt="mainvisual">
+      <img src="<?php echo $template_url; ?>/img/common/mv/mv_sp.jpg" class="sp" alt="mainvisual">
     </div>
     <div class="p_home-mv__blur"></div>
     <div class="p_home-mv__ttl">
@@ -511,7 +511,7 @@ global $home_url;
         <div class="p_home-tab" id="js-tab">
           <div class="p_home-tab-nav">
             <a href="" class="p_home-tab-nav__item is_active" data-nav="0">包丁の持ち方</a>
-            <a href="" class="p_home-tab-nav__item" data-nav="1">皮活用</a>
+            <a href="" class="p_home-tab-nav__item" data-nav="1">おすすめ調味料</a>
             <a href="" class="p_home-tab-nav__item" data-nav="2">下処理・下準備</a>
           </div>
           <div class="p_home-tab-contents">

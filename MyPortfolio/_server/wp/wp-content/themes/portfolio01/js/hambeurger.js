@@ -33,17 +33,41 @@
 
 // })();
 (() => {
+  // const $doc = document;
+  // const $btn = $doc.getElementById('js-menu');
+  // const $menu = $doc.querySelector('.c-header-menu'); // 最初の1つだけ取得
+  // const $back = $doc.querySelector('.c-header-flex'); // 最初の1つだけ取得
+  
+
+  // const handleClick = () => {
+  //   $btn.classList.toggle('open');
+  //   $menu.classList.toggle('open');
+  //   $back.classList.toggle('open');
+  //   };
+
+
+  // $btn.addEventListener('click', handleClick);
+
   const $doc = document;
   const $btn = $doc.getElementById('js-menu');
   const $menu = $doc.querySelector('.c-header-menu'); // 最初の1つだけ取得
   const $back = $doc.querySelector('.c-header-flex'); // 最初の1つだけ取得
+  const $body = $doc.body; // body要素を取得
   
   const handleClick = () => {
     $btn.classList.toggle('open');
     $menu.classList.toggle('open');
     $back.classList.toggle('open');
-    };
-
+  
+    // メニューが開いているかどうかをチェック
+    const isMenuOpen = $menu.classList.contains('open');
+  
+    if (isMenuOpen) {
+      $body.style.overflow = 'hidden'; // 背景のスクロールを固定
+    } else {
+      $body.style.overflow = ''; // 背景スクロールを解除
+    }
+  };
+  
   $btn.addEventListener('click', handleClick);
- 
 })();

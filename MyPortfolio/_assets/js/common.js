@@ -180,19 +180,18 @@
     $(this).anmDelay();
   });
 
-
   var slider01 = $('.l-slider01-block__slider');
   if (slider01[0]) {
-    slider01.slick({
-      autoplay: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      dots: true,
-      centerMode: false,
-      infinite: true,
-      speed: 2000,
-      nextArrow: '<button class="slick-next slick-arrow" aria-label="Next" type="button" style=""></button>',
-      prevArrow: '<button class="slick-prev slick-arrow" aria-label="Prev" type="button" style=""></button>',
+    // slider01.slick({
+    //   autoplay: true,
+    //   slidesToShow: 1,
+    //   slidesToScroll: 1,
+    //   dots: true,
+    //   centerMode: false,
+    //   infinite: true,
+    //   speed: 2000,
+    //   nextArrow: '<button class="slick-next slick-arrow" aria-label="Next" type="button" style=""></button>',
+    //   prevArrow: '<button class="slick-prev slick-arrow" aria-label="Prev" type="button" style=""></button>',
       // responsive: [
       //   {
       //     breakpoint: 641,
@@ -202,22 +201,22 @@
       //     }
       //   }
       // ]
-    });
-    // あさみ↓
-    // slider01.slick({
-    //   autoplay: true,
-    //   slidesToShow: 1,
-    //   slidesToScroll: 1,
-    //   dots: true,
-    //   dotsClass: "dot-img",
-    //   appendDots: $(".c-slider-arrows"),
-    //   centerMode: false,
-    //   infinite: true,
-    //   speed: 2000,
-    //   nextArrow: '<button class="slick-next slick-arrow" aria-label="Next" type="button" style=""></button>',
-    //   prevArrow: '<button class="slick-prev slick-arrow" aria-label="Prev" type="button" style=""></button>',
-
     // });
+    // あさみ↓
+    slider01.slick({
+      autoplay: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: true,
+      dotsClass: "dot-img",
+      appendDots: $(".c-slider-arrows"),
+      centerMode: false,
+      infinite: true,
+      speed: 2000,
+      nextArrow: '<button class="slick-next slick-arrow" aria-label="Next" type="button" style=""></button>',
+      prevArrow: '<button class="slick-prev slick-arrow" aria-label="Prev" type="button" style=""></button>',
+
+    });
   }
 
   $(document).ready(function () {

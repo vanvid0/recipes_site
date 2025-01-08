@@ -7,35 +7,46 @@ global $home_url;
 <main class="outer-block p_home">
   <div class="p_recipes-mv">
     <div class="p_recipes-mv__img">
-      <img src="<?php echo $template_url; ?>/img/common/mv/menu.png" alt="mainvisual">
+    <img src="<?php echo $template_url; ?>/img/common/mv/menu.png" alt="mainvisual">
     </div>
     <div class="p_recipes-mv__ttl">
       <?php the_title(); ?>
     </div>
   </div>
   <div class="p_recipes-map">
-    <a href="/" class="text">top</a>
+    <a href="<?php echo $home_url; ?>/" class="text">top</a>
     <div class="ico">
       <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M6.83256 5.21875L1.91215 0.321713C1.75462 0.1662 1.49988 0.1662 1.34235 0.321713L0.678697 0.976859C0.521163 1.13237 0.521163 1.38384 0.678697 1.53935L4.65055 5.5L0.678697 9.46067C0.521163 9.61615 0.521163 9.86759 0.678697 10.0232L1.34235 10.6783C1.49988 10.8338 1.75462 10.8338 1.91215 10.6783L6.83256 5.78124C6.99009 5.62573 6.99009 5.37426 6.83256 5.21875Z" fill="#562708" />
       </svg>
 
     </div>
-    <a href="/recipes/" class="text">レシピ一覧</a>
+    <a href="<?php echo $home_url; ?>/recipes/" class="text">レシピ一覧</a>
     <div class="ico">
       <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M6.83256 5.21875L1.91215 0.321713C1.75462 0.1662 1.49988 0.1662 1.34235 0.321713L0.678697 0.976859C0.521163 1.13237 0.521163 1.38384 0.678697 1.53935L4.65055 5.5L0.678697 9.46067C0.521163 9.61615 0.521163 9.86759 0.678697 10.0232L1.34235 10.6783C1.49988 10.8338 1.75462 10.8338 1.91215 10.6783L6.83256 5.78124C6.99009 5.62573 6.99009 5.37426 6.83256 5.21875Z" fill="#562708" />
       </svg>
 
     </div>
-    <a href="/recipes/detail/" class="text"><?php the_title(); ?></a>
+    <a href="<?php the_permalink(); ?>" class="text"><?php the_title(); ?></a>
   </div>
 
   <section class="p_recipes">
     <div class="inner-block">
       <div class="p_detail">
         <h2 class="p_detail__headline"><?php the_title(); ?></h2>
-        <span class="c-label-m"><?php the_category(); ?></span>
+        <?php
+                      $taxonomy = 'recipes-cat';
+                      $terms = get_the_terms(get_the_ID(), $taxonomy);
+
+                      if ($terms && !is_wp_error($terms)) {
+                        foreach ($terms as $term) {
+                          echo '<span class="recipes-category-label tech-text ' . esc_attr($term->slug) . '">' . esc_html($term->name) . '</span>';
+                        }
+                      } else {
+                        echo '<span class="recipes-category-label default-label">カテゴリーなし</span>';
+                      }
+                      ?>
       </div>
       <div class="p_recipes-menu sp">
         <span class="title">お酒の種類から探す</span>
@@ -99,7 +110,7 @@ global $home_url;
 
               </div>
               <div class="p_detail-how__point">
-                <span class="title">コツ・ポイント</span>
+                <span class="title">コツ・ポイント<br></span>
                 <?php the_excerpt(); ?>
               </div>
             </div>

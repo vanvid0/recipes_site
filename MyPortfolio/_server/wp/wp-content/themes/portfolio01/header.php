@@ -22,8 +22,9 @@ global $home_url;
   <title>酒飲みのためのレシピサイト</title>
   <meta name="keywords" content="">
   <meta name="description" content="">
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" /> -->
+  <link rel="stylesheet" type="text/css" href="<?php echo $template_url; ?>/css/slick.css">
   <link rel="stylesheet" type="text/css" href="<?php echo $template_url; ?>/css/style.css">
   <?php wp_head(); ?>
 </head>
@@ -56,7 +57,7 @@ global $home_url;
         <a href="<?php echo $home_url; ?>/technique/" class="title">料理のコツ一覧</a>
         <a href="<?php echo $home_url; ?>/technique-cat/knife/" class="text-b">包丁の持ち方</a>
             <a href="<?php echo $home_url; ?>/technique-cat/pre/" class="text-b">下処理・下準備</a>
-            <a href="<?php echo $home_url; ?>/technique-cat/peer/" class="text-b">皮活用</a>
+            <a href="<?php echo $home_url; ?>/technique-cat/peer/" class="text-b">おすすめ調味料</a>
       </div>
       <!-- <div class="c-header-health">
         <a href="<?php echo $home_url; ?>#">

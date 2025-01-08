@@ -87,7 +87,7 @@ global $home_url;
             <span class="c-recipes-cat__b title">カテゴリー</span>
             <a href="<?php echo $home_url; ?>/technique-cat/knife/" class="text-b">包丁の持ち方</a>
             <a href="<?php echo $home_url; ?>/technique-cat/pre/" class="text-b">下処理・下準備</a>
-            <a href="<?php echo $home_url; ?>/technique-cat/peer/" class="text-b">皮活用</a>
+            <a href="<?php echo $home_url; ?>/technique-cat/peer/" class="text-b">おすすめ調味料</a>
           </div>
         </div>
       </div>

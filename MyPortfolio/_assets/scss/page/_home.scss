@@ -232,6 +232,8 @@ button.slick-arrow.slick-next {
   border: 1px solid $mainColor;
   border-radius: 10px;
   overflow: hidden;
+  background-color: #fff;
+  height: 100%;
   @include sp {
     margin: 0 10px;
   }
@@ -297,7 +299,7 @@ button.slick-arrow.slick-next {
 
   &__info {
     padding: 10px;
-    background-color: #fff;
+    
   }
 
   &__headline {

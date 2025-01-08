@@ -3,8 +3,15 @@ $home_url = get_bloginfo('url');
 $template_url = get_bloginfo('template_directory');
 
 
-//抜粋を表示
+//抜粋を表示 50文字まで 自動で挿入されるpタグを削除
  add_post_type_support( 'recipes' , 'excerpt' );
+
+function custom_excerpt_length( $length ) {
+     return 20;
+}
+add_filter( 'excerpt_length' , 'custom_excerpt_length' , 999 );
+remove_filter( 'the_excerpt' , 'wpautop' );
+
 
 
 //ショートコード
