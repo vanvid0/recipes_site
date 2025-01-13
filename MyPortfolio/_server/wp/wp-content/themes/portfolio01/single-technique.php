@@ -27,7 +27,7 @@ global $home_url;
       </svg>
     </div>
     <a href="<?php the_permalink(); ?>" class="text"><?php the_title(); ?></a>
-    
+
   </div>
 
 
@@ -35,23 +35,23 @@ global $home_url;
 
     <div class="inner-block">
       <div class="p_cat-detail-grid1">
-        
 
+        <div class="p_tech-content">
           <?php the_content(); ?>
-
-          <div class="c-cap">
-            <span class="hint">\ 美味しくなるヒント /</span>
-            <span class="text-r">味見をしましょう。</span>
-            <span class="text-r">火が通りにくい食材から。</span>
-            <span class="text-r">心をこめて。</span>
-            <div class="c-recipes-cat">
-              <span class="c-recipes-cat__b title">カテゴリー</span>
-              <a href="<?php echo $home_url; ?>/technique-cat/knife/" class="text-b">包丁の持ち方</a>
+        </div>
+        <div class="c-cap">
+          <span class="hint">\ 美味しくなるヒント /</span>
+          <span class="text-r">味見をしましょう。</span>
+          <span class="text-r">火が通りにくい食材から。</span>
+          <span class="text-r">心をこめて。</span>
+          <div class="c-recipes-cat">
+            <span class="c-recipes-cat__b title">カテゴリー</span>
+            <a href="<?php echo $home_url; ?>/technique-cat/knife/" class="text-b">包丁の持ち方</a>
             <a href="<?php echo $home_url; ?>/technique-cat/pre/" class="text-b">下処理・下準備</a>
             <a href="<?php echo $home_url; ?>/technique-cat/peer/" class="text-b">皮活用</a>
-            </div>
           </div>
-        
+        </div>
+
       </div>
 
   </section>

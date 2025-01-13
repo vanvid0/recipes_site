@@ -43,20 +43,20 @@ global $home_url;
         ?>
       </h2>
       <div class="p_recipes-menu sp">
-        <form action="" name="form1">
+      <form action="" name="form1">
           <span class="title">お酒の種類から探す</span>
           <select name="alcohol" id="alcohol">
             <option value="">選択してください</option>
-            <option value="/category/">ビールに合うレシピ</option>
-            <option value="/category/">ハイボールに合うレシピ</option>
-            <option value="/category/">ワインに合うレシピ</option>
+            <option value="<?php echo $home_url ?>/recipes-drink/beer/">ビールに合うレシピ</option>
+            <option value="<?php echo $home_url ?>/recipes-drink/highball/">ハイボールに合うレシピ</option>
+            <option value="<?php echo $home_url ?>/recipes-drink/wine/">ワインに合うレシピ</option>
           </select>
           <span class="title">料理の種類から探す</span>
           <select name="dish" id="dish">
             <option value="">選択してください</option>
-            <option value="/category/">簡単おつまみ</option>
-            <option value="/category/">主菜のおつまみ</option>
-            <option value="/category/">〆の逸品</option>
+            <option value="<?php echo $home_url ?>/recipes-cat/appetizer/">簡単おつまみ</option>
+            <option value="<?php echo $home_url ?>/recipes-cat/main/">主菜のおつまみ</option>
+            <option value="<?php echo $home_url ?>/recipes-cat/last/">〆の逸品</option>
           </select>
         </form>
       </div>

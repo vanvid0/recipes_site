@@ -46,6 +46,7 @@
 .p_recipes {
   
   margin: 0 auto;
+  min-height: 150px;
 
   @include sp {
     max-width: 640px;

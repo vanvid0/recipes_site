@@ -1494,6 +1494,7 @@ button.slick-arrow.slick-next {
 
 .p_recipes {
   margin: 0 auto;
+  min-height: 150px;
 }
 .p_recipes__headline {
   margin-top: 102px;
@@ -1665,7 +1666,7 @@ button.slick-arrow.slick-next {
 * homeページ用
 -------------------------------------------------- */
 .p_tech-cat-grid1 {
-  margin-top: 70px;
+  margin-top: 36px;
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 70px;
@@ -1681,7 +1682,7 @@ button.slick-arrow.slick-next {
 * homeページ用
 -------------------------------------------------- */
 .p_tech-grid1 {
-  margin-top: 140px;
+  margin-top: 36px;
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 70px;
@@ -1697,7 +1698,7 @@ button.slick-arrow.slick-next {
 * homeページ用
 -------------------------------------------------- */
 .p_cat-detail-grid1 {
-  margin-top: 10px;
+  margin-top: 36px;
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 70px;
