@@ -31,7 +31,7 @@ global $home_url;
       <h1 class="p_recipes__headline Kranky">Recipes</h1>
       <div class="p_recipes__rubi">レシピ</div>
       <div class="p_recipes-menu sp">
-      <form action="" name="form1">
+        <form action="" name="form1">
           <span class="title">お酒の種類から探す</span>
           <select name="alcohol" id="alcohol">
             <option value="">選択してください</option>
