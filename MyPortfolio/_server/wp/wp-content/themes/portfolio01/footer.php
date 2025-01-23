@@ -26,16 +26,16 @@ global $home_url;
         <div class="c-footer-nav-recipes">
           <a href="<?php echo $home_url; ?>/recipes/" class="title">レシピ一覧</a>
           <div class="c-footer-nav-recipes__cat">
-            <a href="<?php echo $home_url; ?>/recipes/" class="title">お酒の種類から探す</a>
-            <a href="<?php echo $home_url; ?>/recipes-drink/beer/" class="text-b">ビールに合うレシピ</a>
-            <a href="<?php echo $home_url; ?>/recipes-drink/highball/" class="text-b">ハイボールに合うレシピ</a>
-            <a href="<?php echo $home_url; ?>/recipes-drink/wine/" class="text-b">ワインに合うレシピ</a>
+            <a href="<?php echo $home_url; ?>/recipes/" class="text-b">お酒の種類から探す</a>
+            <a href="<?php echo $home_url; ?>/recipes-drink/beer/" class="text">ビールに合うレシピ</a>
+            <a href="<?php echo $home_url; ?>/recipes-drink/highball/" class="text">ハイボールに合うレシピ</a>
+            <a href="<?php echo $home_url; ?>/recipes-drink/wine/" class="text">ワインに合うレシピ</a>
           </div>
           <div class="c-footer-nav-recipes__cat">
-            <a href="<?php echo $home_url; ?>/recipes/" class="title">料理の種類から探す</a>
-            <a href="<?php echo $home_url; ?>/recipes-cat/appetizer/" class="text-b">簡単おつまみ</a>
-            <a href="<?php echo $home_url; ?>/recipes-cat/main/" class="text-b">主菜のおつまみ</a>
-            <a href="<?php echo $home_url; ?>/recipes-cat/last/" class="text-b">〆の逸品</a>
+            <a href="<?php echo $home_url; ?>/recipes/" class="text-b">料理の種類から探す</a>
+            <a href="<?php echo $home_url; ?>/recipes-cat/appetizer/" class="text">簡単おつまみ</a>
+            <a href="<?php echo $home_url; ?>/recipes-cat/main/" class="text">主菜のおつまみ</a>
+            <a href="<?php echo $home_url; ?>/recipes-cat/last/" class="text">〆の逸品</a>
           </div>
         </div>
         <div class="c-footer-nav-tech">
