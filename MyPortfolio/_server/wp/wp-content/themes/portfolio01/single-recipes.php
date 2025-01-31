@@ -41,27 +41,21 @@ global $home_url;
 
                       if ($terms && !is_wp_error($terms)) {
                         foreach ($terms as $term) {
-                          echo '<span class="recipes-category-label tech-text ' . esc_attr($term->slug) . '">' . esc_html($term->name) . '</span>';
+                          echo '<span class="recipes-category-label tech-text pc ' . esc_attr($term->slug) . '">' . esc_html($term->name) . '</span>';
                         }
-                      } else {
-                        echo '<span class="recipes-category-label default-label">カテゴリーなし</span>';
-                      }
+                      } 
                       ?>
       </div>
-      <div class="p_recipes-menu sp">
-        <span class="title">お酒の種類から探す</span>
-        <select name="alcohol" id="alcohol">
-          <option value="">ビールに合うレシピ</option>
-          <option value="">ハイボールに合うレシピ</option>
-          <option value="">ワインに合うレシピ</option>
-        </select>
-        <span class="title">料理の種類から探す</span>
-        <select name="dish" id="dish">
-          <option value="">簡単おつまみ</option>
-          <option value="">主菜のおつまみ</option>
-          <option value="">〆の逸品</option>
-        </select>
-      </div>
+      <?php
+                      $taxonomy = 'recipes-cat';
+                      $terms = get_the_terms(get_the_ID(), $taxonomy);
+
+                      if ($terms && !is_wp_error($terms)) {
+                        foreach ($terms as $term) {
+                          echo '<span class="recipes-category-label tech-text sp ' . esc_attr($term->slug) . '">' . esc_html($term->name) . '</span>';
+                        }
+                      } 
+                      ?>
       <div class="p_recipes-grid1">
         <?php
         if (have_posts()) :

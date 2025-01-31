@@ -44,6 +44,7 @@
 
   &>a {
     color: #fff;
+    padding: 30px;
   }
 
   &:hover {
@@ -71,6 +72,7 @@
   }
 
   &>a {
+    padding: 30px;
     color: $headLineColor;
   }
 
@@ -200,6 +202,9 @@
 
   &.last {
     background-color: #C29906;
+  }
+  &.sp {
+    position: relative;
   }
 }
 

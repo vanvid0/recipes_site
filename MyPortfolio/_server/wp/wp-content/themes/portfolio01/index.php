@@ -174,7 +174,7 @@ global $home_url;
       </ul>
 
 
-      <div class="p_home-recipes__button c-button-b"><a href="<?php echo $home_url; ?>/category/">View More</a><span class="ico">
+      <div class="p_home-recipes__button c-button-b"><a href="<?php echo $home_url; ?>/recipes-drink/beer/">View More</a><span class="ico">
           <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M6.83256 5.21875L1.91215 0.321713C1.75462 0.1662 1.49988 0.1662 1.34235 0.321713L0.678697 0.976859C0.521163 1.13237 0.521163 1.38384 0.678697 1.53935L4.65055 5.5L0.678697 9.46067C0.521163 9.61615 0.521163 9.86759 0.678697 10.0232L1.34235 10.6783C1.49988 10.8338 1.75462 10.8338 1.91215 10.6783L6.83256 5.78124C6.99009 5.62573 6.99009 5.37426 6.83256 5.21875Z"
@@ -325,7 +325,7 @@ global $home_url;
 
 
 
-      <div class="p_home-recipes__button c-button-b"><a href="<?php echo $home_url; ?>/category/">View More</a><span class="ico">
+      <div class="p_home-recipes__button c-button-b"><a href="<?php echo $home_url; ?>/recipes-drink/highball/">View More</a><span class="ico">
           <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M6.83256 5.21875L1.91215 0.321713C1.75462 0.1662 1.49988 0.1662 1.34235 0.321713L0.678697 0.976859C0.521163 1.13237 0.521163 1.38384 0.678697 1.53935L4.65055 5.5L0.678697 9.46067C0.521163 9.61615 0.521163 9.86759 0.678697 10.0232L1.34235 10.6783C1.49988 10.8338 1.75462 10.8338 1.91215 10.6783L6.83256 5.78124C6.99009 5.62573 6.99009 5.37426 6.83256 5.21875Z"
@@ -470,7 +470,7 @@ global $home_url;
           <p>該当する投稿がありません。</p>
         <?php endif; ?>
       </ul>
-      <div class="p_home-recipes__button c-button-b"><a href="<?php echo $home_url; ?>/category/">View More</a><span class="ico">
+      <div class="p_home-recipes__button c-button-b"><a href="<?php echo $home_url; ?>/recipes-drink/wine/">View More</a><span class="ico">
           <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M6.83256 5.21875L1.91215 0.321713C1.75462 0.1662 1.49988 0.1662 1.34235 0.321713L0.678697 0.976859C0.521163 1.13237 0.521163 1.38384 0.678697 1.53935L4.65055 5.5L0.678697 9.46067C0.521163 9.61615 0.521163 9.86759 0.678697 10.0232L1.34235 10.6783C1.49988 10.8338 1.75462 10.8338 1.91215 10.6783L6.83256 5.78124C6.99009 5.62573 6.99009 5.37426 6.83256 5.21875Z"

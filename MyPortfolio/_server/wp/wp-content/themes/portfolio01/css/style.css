@@ -542,6 +542,7 @@ footer {
 }
 .c-button-b > a {
   color: #fff;
+  padding: 30px;
 }
 .c-button-b:hover {
   opacity: 0.8;
@@ -567,6 +568,7 @@ footer {
   right: 12px;
 }
 .c-button-a > a {
+  padding: 30px;
   color: #840F24;
 }
 .c-button-a:hover {
@@ -667,6 +669,9 @@ footer {
 }
 .recipes-category-label.last {
   background-color: #C29906;
+}
+.recipes-category-label.sp {
+  position: relative;
 }
 
 .box {
